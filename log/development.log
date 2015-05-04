@@ -5642,3 +5642,894 @@ Processing by Refinery::Blog::PostsController#index as HTML
   Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_footer.html.erb (0.2ms)
   Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_javascripts.html.erb (22.1ms)
 Completed 200 OK in 294ms (Views: 284.9ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-04 12:04:39 -0700
+Processing by Refinery::PagesController#home as HTML
+  Parameters: {"locale"=>:en}
+  [1m[35mRefinery::Page Load (0.1ms)[0m  SELECT  "refinery_pages".* FROM "refinery_pages" WHERE "refinery_pages"."link_url" = ?  ORDER BY "refinery_pages"."id" ASC LIMIT 1  [["link_url", "/"]]
+  [1m[36mRefinery::Page::Translation Load (0.1ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" = ?[0m  [["refinery_page_id", 1]]
+  [1m[35mRefinery::PagePart Load (0.1ms)[0m  SELECT "refinery_page_parts".* FROM "refinery_page_parts" WHERE "refinery_page_parts"."refinery_page_id" = ?  ORDER BY position ASC  [["refinery_page_id", 1]]
+  [1m[36mRefinery::PagePart::Translation Load (0.2ms)[0m  [1mSELECT "refinery_page_part_translations".* FROM "refinery_page_part_translations" WHERE "refinery_page_part_translations"."refinery_page_part_id" IN (1, 2)[0m
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_content_page.html.erb (4.9ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/pages/home.html.erb within layouts/application (17.0ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_html_tag.html.erb (0.1ms)
+  [1m[35mRefinery::User Load (0.1ms)[0m  SELECT  "refinery_users".* FROM "refinery_users" WHERE "refinery_users"."id" = ?  ORDER BY "refinery_users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRefinery::Role Load (0.1ms)[0m  [1mSELECT "refinery_roles".* FROM "refinery_roles" INNER JOIN "refinery_roles_users" ON "refinery_roles"."id" = "refinery_roles_users"."role_id" WHERE "refinery_roles_users"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_site_bar.html.erb (19.7ms)
+  [1m[35mSeoMetum Load (0.1ms)[0m  SELECT  "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = ? AND "seo_meta"."seo_meta_id" = ?  ORDER BY "seo_meta"."id" ASC LIMIT 1  [["seo_meta_type", "Refinery::Page::Translation"], ["seo_meta_id", 1]]
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_google_analytics.html.erb (0.1ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_head.html.erb (32.1ms)
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT "refinery_pages"."id" AS t0_r0, "refinery_pages"."parent_id" AS t0_r1, "refinery_pages"."path" AS t0_r2, "refinery_pages"."slug" AS t0_r3, "refinery_pages"."custom_slug" AS t0_r4, "refinery_pages"."show_in_menu" AS t0_r5, "refinery_pages"."link_url" AS t0_r6, "refinery_pages"."menu_match" AS t0_r7, "refinery_pages"."deletable" AS t0_r8, "refinery_pages"."draft" AS t0_r9, "refinery_pages"."skip_to_first_child" AS t0_r10, "refinery_pages"."lft" AS t0_r11, "refinery_pages"."rgt" AS t0_r12, "refinery_pages"."depth" AS t0_r13, "refinery_pages"."view_template" AS t0_r14, "refinery_pages"."layout_template" AS t0_r15, "refinery_pages"."created_at" AS t0_r16, "refinery_pages"."updated_at" AS t0_r17, "parents_refinery_pages"."id" AS t1_r0, "parents_refinery_pages"."parent_id" AS t1_r1, "parents_refinery_pages"."path" AS t1_r2, "parents_refinery_pages"."slug" AS t1_r3, "parents_refinery_pages"."custom_slug" AS t1_r4, "parents_refinery_pages"."show_in_menu" AS t1_r5, "parents_refinery_pages"."link_url" AS t1_r6, "parents_refinery_pages"."menu_match" AS t1_r7, "parents_refinery_pages"."deletable" AS t1_r8, "parents_refinery_pages"."draft" AS t1_r9, "parents_refinery_pages"."skip_to_first_child" AS t1_r10, "parents_refinery_pages"."lft" AS t1_r11, "parents_refinery_pages"."rgt" AS t1_r12, "parents_refinery_pages"."depth" AS t1_r13, "parents_refinery_pages"."view_template" AS t1_r14, "parents_refinery_pages"."layout_template" AS t1_r15, "parents_refinery_pages"."created_at" AS t1_r16, "parents_refinery_pages"."updated_at" AS t1_r17, "refinery_page_translations"."id" AS t2_r0, "refinery_page_translations"."refinery_page_id" AS t2_r1, "refinery_page_translations"."locale" AS t2_r2, "refinery_page_translations"."created_at" AS t2_r3, "refinery_page_translations"."updated_at" AS t2_r4, "refinery_page_translations"."title" AS t2_r5, "refinery_page_translations"."custom_slug" AS t2_r6, "refinery_page_translations"."menu_title" AS t2_r7, "refinery_page_translations"."slug" AS t2_r8 FROM "refinery_pages" INNER JOIN "refinery_page_translations" ON "refinery_page_translations"."refinery_page_id" = "refinery_pages"."id" LEFT OUTER JOIN "refinery_pages" "parents_refinery_pages" ON "parents_refinery_pages"."id" = "refinery_pages"."parent_id" WHERE "refinery_pages"."draft" = 'f' AND "refinery_pages"."show_in_menu" = 't' AND "refinery_page_translations"."locale" = 'en'  ORDER BY "refinery_pages"."lft"[0m
+  [1m[35mRefinery::Page Load (0.2ms)[0m  SELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 4) AND ("refinery_pages"."rgt" >= 5)  ORDER BY "refinery_pages"."lft"
+  [1m[36mRefinery::Page::Translation Load (0.2ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 4)[0m
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_header.html.erb (17.8ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_footer.html.erb (0.2ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_javascripts.html.erb (22.2ms)
+Completed 200 OK in 195ms (Views: 191.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2015-05-04 12:16:17 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Refinery::PagesController#home as HTML
+  Parameters: {"locale"=>:en}
+  [1m[35mRefinery::Page Load (0.1ms)[0m  SELECT  "refinery_pages".* FROM "refinery_pages" WHERE "refinery_pages"."link_url" = ?  ORDER BY "refinery_pages"."id" ASC LIMIT 1  [["link_url", "/"]]
+  [1m[36mRefinery::Page::Translation Load (0.2ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" = ?[0m  [["refinery_page_id", 1]]
+  [1m[35mRefinery::PagePart Load (0.1ms)[0m  SELECT "refinery_page_parts".* FROM "refinery_page_parts" WHERE "refinery_page_parts"."refinery_page_id" = ?  ORDER BY position ASC  [["refinery_page_id", 1]]
+  [1m[36mRefinery::PagePart::Translation Load (0.2ms)[0m  [1mSELECT "refinery_page_part_translations".* FROM "refinery_page_part_translations" WHERE "refinery_page_part_translations"."refinery_page_part_id" IN (1, 2)[0m
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_content_page.html.erb (47.2ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/pages/home.html.erb within layouts/application (59.5ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_html_tag.html.erb (0.4ms)
+  [1m[35mRefinery::User Load (0.1ms)[0m  SELECT  "refinery_users".* FROM "refinery_users" WHERE "refinery_users"."id" = ?  ORDER BY "refinery_users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRefinery::Role Load (0.1ms)[0m  [1mSELECT "refinery_roles".* FROM "refinery_roles" INNER JOIN "refinery_roles_users" ON "refinery_roles"."id" = "refinery_roles_users"."role_id" WHERE "refinery_roles_users"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_site_bar.html.erb (196.2ms)
+  [1m[35mSeoMetum Load (0.2ms)[0m  SELECT  "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = ? AND "seo_meta"."seo_meta_id" = ?  ORDER BY "seo_meta"."id" ASC LIMIT 1  [["seo_meta_type", "Refinery::Page::Translation"], ["seo_meta_id", 1]]
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_head.html.erb (23.9ms)
+Completed 500 Internal Server Error in 372ms
+
+ActionView::Template::Error (Invalid CSS after "...trap-sprockets"": expected "{", was ";"):
+    3: <title><%= browser_title(yield(:title)) %></title>
+    4: <%= raw %(<meta name="description" content="#{@meta.meta_description}" />) if @meta.meta_description.present? -%>
+    5: <%= raw %(<link rel="canonical" href="#{request.protocol}#{request.host_with_port}#{@canonical}" />) if @canonical.present? -%>
+    6: <%= csrf_meta_tags if Refinery::Core.authenticity_token_on_frontend -%>
+    7: <%= yield :meta %>
+    8: 
+    9: <%= stylesheet_link_tag "application" %>
+  app/assets/stylesheets/application.scss:15
+
+
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (45.7ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (36.3ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (77.8ms)
+
+
+Started GET "/" for ::1 at 2015-05-04 12:16:32 -0700
+Processing by Refinery::PagesController#home as HTML
+  Parameters: {"locale"=>:en}
+  [1m[36mRefinery::Page Load (0.1ms)[0m  [1mSELECT  "refinery_pages".* FROM "refinery_pages" WHERE "refinery_pages"."link_url" = ?  ORDER BY "refinery_pages"."id" ASC LIMIT 1[0m  [["link_url", "/"]]
+  [1m[35mRefinery::Page::Translation Load (0.1ms)[0m  SELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" = ?  [["refinery_page_id", 1]]
+  [1m[36mRefinery::PagePart Load (0.1ms)[0m  [1mSELECT "refinery_page_parts".* FROM "refinery_page_parts" WHERE "refinery_page_parts"."refinery_page_id" = ?  ORDER BY position ASC[0m  [["refinery_page_id", 1]]
+  [1m[35mRefinery::PagePart::Translation Load (0.2ms)[0m  SELECT "refinery_page_part_translations".* FROM "refinery_page_part_translations" WHERE "refinery_page_part_translations"."refinery_page_part_id" IN (1, 2)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_content_page.html.erb (4.8ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/pages/home.html.erb within layouts/application (14.0ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_html_tag.html.erb (0.0ms)
+  [1m[36mRefinery::User Load (0.1ms)[0m  [1mSELECT  "refinery_users".* FROM "refinery_users" WHERE "refinery_users"."id" = ?  ORDER BY "refinery_users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRefinery::Role Load (0.1ms)[0m  SELECT "refinery_roles".* FROM "refinery_roles" INNER JOIN "refinery_roles_users" ON "refinery_roles"."id" = "refinery_roles_users"."role_id" WHERE "refinery_roles_users"."user_id" = ?  [["user_id", 1]]
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_site_bar.html.erb (15.2ms)
+  [1m[36mSeoMetum Load (0.2ms)[0m  [1mSELECT  "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = ? AND "seo_meta"."seo_meta_id" = ?  ORDER BY "seo_meta"."id" ASC LIMIT 1[0m  [["seo_meta_type", "Refinery::Page::Translation"], ["seo_meta_id", 1]]
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_head.html.erb (21.5ms)
+Completed 500 Internal Server Error in 109ms
+
+ActionView::Template::Error (Invalid CSS after " *= require_self": expected "{", was ""):
+    3: <title><%= browser_title(yield(:title)) %></title>
+    4: <%= raw %(<meta name="description" content="#{@meta.meta_description}" />) if @meta.meta_description.present? -%>
+    5: <%= raw %(<link rel="canonical" href="#{request.protocol}#{request.host_with_port}#{@canonical}" />) if @canonical.present? -%>
+    6: <%= csrf_meta_tags if Refinery::Core.authenticity_token_on_frontend -%>
+    7: <%= yield :meta %>
+    8: 
+    9: <%= stylesheet_link_tag "application" %>
+  app/assets/stylesheets/application.scss:21
+
+
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (45.6ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (32.4ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (71.7ms)
+
+
+Started GET "/" for ::1 at 2015-05-04 12:16:45 -0700
+Processing by Refinery::PagesController#home as HTML
+  Parameters: {"locale"=>:en}
+  [1m[35mRefinery::Page Load (0.2ms)[0m  SELECT  "refinery_pages".* FROM "refinery_pages" WHERE "refinery_pages"."link_url" = ?  ORDER BY "refinery_pages"."id" ASC LIMIT 1  [["link_url", "/"]]
+  [1m[36mRefinery::Page::Translation Load (0.1ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" = ?[0m  [["refinery_page_id", 1]]
+  [1m[35mRefinery::PagePart Load (0.1ms)[0m  SELECT "refinery_page_parts".* FROM "refinery_page_parts" WHERE "refinery_page_parts"."refinery_page_id" = ?  ORDER BY position ASC  [["refinery_page_id", 1]]
+  [1m[36mRefinery::PagePart::Translation Load (0.2ms)[0m  [1mSELECT "refinery_page_part_translations".* FROM "refinery_page_part_translations" WHERE "refinery_page_part_translations"."refinery_page_part_id" IN (1, 2)[0m
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_content_page.html.erb (3.9ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/pages/home.html.erb within layouts/application (14.8ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_html_tag.html.erb (0.1ms)
+  [1m[35mRefinery::User Load (0.1ms)[0m  SELECT  "refinery_users".* FROM "refinery_users" WHERE "refinery_users"."id" = ?  ORDER BY "refinery_users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRefinery::Role Load (0.1ms)[0m  [1mSELECT "refinery_roles".* FROM "refinery_roles" INNER JOIN "refinery_roles_users" ON "refinery_roles"."id" = "refinery_roles_users"."role_id" WHERE "refinery_roles_users"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_site_bar.html.erb (21.6ms)
+  [1m[35mSeoMetum Load (0.1ms)[0m  SELECT  "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = ? AND "seo_meta"."seo_meta_id" = ?  ORDER BY "seo_meta"."id" ASC LIMIT 1  [["seo_meta_type", "Refinery::Page::Translation"], ["seo_meta_id", 1]]
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_google_analytics.html.erb (0.6ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_head.html.erb (97.2ms)
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT "refinery_pages"."id" AS t0_r0, "refinery_pages"."parent_id" AS t0_r1, "refinery_pages"."path" AS t0_r2, "refinery_pages"."slug" AS t0_r3, "refinery_pages"."custom_slug" AS t0_r4, "refinery_pages"."show_in_menu" AS t0_r5, "refinery_pages"."link_url" AS t0_r6, "refinery_pages"."menu_match" AS t0_r7, "refinery_pages"."deletable" AS t0_r8, "refinery_pages"."draft" AS t0_r9, "refinery_pages"."skip_to_first_child" AS t0_r10, "refinery_pages"."lft" AS t0_r11, "refinery_pages"."rgt" AS t0_r12, "refinery_pages"."depth" AS t0_r13, "refinery_pages"."view_template" AS t0_r14, "refinery_pages"."layout_template" AS t0_r15, "refinery_pages"."created_at" AS t0_r16, "refinery_pages"."updated_at" AS t0_r17, "parents_refinery_pages"."id" AS t1_r0, "parents_refinery_pages"."parent_id" AS t1_r1, "parents_refinery_pages"."path" AS t1_r2, "parents_refinery_pages"."slug" AS t1_r3, "parents_refinery_pages"."custom_slug" AS t1_r4, "parents_refinery_pages"."show_in_menu" AS t1_r5, "parents_refinery_pages"."link_url" AS t1_r6, "parents_refinery_pages"."menu_match" AS t1_r7, "parents_refinery_pages"."deletable" AS t1_r8, "parents_refinery_pages"."draft" AS t1_r9, "parents_refinery_pages"."skip_to_first_child" AS t1_r10, "parents_refinery_pages"."lft" AS t1_r11, "parents_refinery_pages"."rgt" AS t1_r12, "parents_refinery_pages"."depth" AS t1_r13, "parents_refinery_pages"."view_template" AS t1_r14, "parents_refinery_pages"."layout_template" AS t1_r15, "parents_refinery_pages"."created_at" AS t1_r16, "parents_refinery_pages"."updated_at" AS t1_r17, "refinery_page_translations"."id" AS t2_r0, "refinery_page_translations"."refinery_page_id" AS t2_r1, "refinery_page_translations"."locale" AS t2_r2, "refinery_page_translations"."created_at" AS t2_r3, "refinery_page_translations"."updated_at" AS t2_r4, "refinery_page_translations"."title" AS t2_r5, "refinery_page_translations"."custom_slug" AS t2_r6, "refinery_page_translations"."menu_title" AS t2_r7, "refinery_page_translations"."slug" AS t2_r8 FROM "refinery_pages" INNER JOIN "refinery_page_translations" ON "refinery_page_translations"."refinery_page_id" = "refinery_pages"."id" LEFT OUTER JOIN "refinery_pages" "parents_refinery_pages" ON "parents_refinery_pages"."id" = "refinery_pages"."parent_id" WHERE "refinery_pages"."draft" = 'f' AND "refinery_pages"."show_in_menu" = 't' AND "refinery_page_translations"."locale" = 'en'  ORDER BY "refinery_pages"."lft"[0m
+  [1m[35mRefinery::Page Load (0.2ms)[0m  SELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 4) AND ("refinery_pages"."rgt" >= 5)  ORDER BY "refinery_pages"."lft"
+  [1m[36mRefinery::Page::Translation Load (0.1ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 4)[0m
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_header.html.erb (27.7ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_footer.html.erb (0.6ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_javascripts.html.erb (152.5ms)
+Completed 200 OK in 408ms (Views: 404.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2015-05-04 12:17:11 -0700
+Processing by Refinery::PagesController#home as HTML
+  Parameters: {"locale"=>:en}
+  [1m[35mRefinery::Page Load (0.1ms)[0m  SELECT  "refinery_pages".* FROM "refinery_pages" WHERE "refinery_pages"."link_url" = ?  ORDER BY "refinery_pages"."id" ASC LIMIT 1  [["link_url", "/"]]
+  [1m[36mRefinery::Page::Translation Load (0.1ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" = ?[0m  [["refinery_page_id", 1]]
+  [1m[35mRefinery::PagePart Load (0.1ms)[0m  SELECT "refinery_page_parts".* FROM "refinery_page_parts" WHERE "refinery_page_parts"."refinery_page_id" = ?  ORDER BY position ASC  [["refinery_page_id", 1]]
+  [1m[36mRefinery::PagePart::Translation Load (0.2ms)[0m  [1mSELECT "refinery_page_part_translations".* FROM "refinery_page_part_translations" WHERE "refinery_page_part_translations"."refinery_page_part_id" IN (1, 2)[0m
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_content_page.html.erb (4.0ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/pages/home.html.erb within layouts/application (13.0ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_html_tag.html.erb (0.1ms)
+  [1m[35mRefinery::User Load (0.1ms)[0m  SELECT  "refinery_users".* FROM "refinery_users" WHERE "refinery_users"."id" = ?  ORDER BY "refinery_users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRefinery::Role Load (0.1ms)[0m  [1mSELECT "refinery_roles".* FROM "refinery_roles" INNER JOIN "refinery_roles_users" ON "refinery_roles"."id" = "refinery_roles_users"."role_id" WHERE "refinery_roles_users"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_site_bar.html.erb (13.8ms)
+  [1m[35mSeoMetum Load (0.1ms)[0m  SELECT  "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = ? AND "seo_meta"."seo_meta_id" = ?  ORDER BY "seo_meta"."id" ASC LIMIT 1  [["seo_meta_type", "Refinery::Page::Translation"], ["seo_meta_id", 1]]
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_google_analytics.html.erb (0.1ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_head.html.erb (63.2ms)
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT "refinery_pages"."id" AS t0_r0, "refinery_pages"."parent_id" AS t0_r1, "refinery_pages"."path" AS t0_r2, "refinery_pages"."slug" AS t0_r3, "refinery_pages"."custom_slug" AS t0_r4, "refinery_pages"."show_in_menu" AS t0_r5, "refinery_pages"."link_url" AS t0_r6, "refinery_pages"."menu_match" AS t0_r7, "refinery_pages"."deletable" AS t0_r8, "refinery_pages"."draft" AS t0_r9, "refinery_pages"."skip_to_first_child" AS t0_r10, "refinery_pages"."lft" AS t0_r11, "refinery_pages"."rgt" AS t0_r12, "refinery_pages"."depth" AS t0_r13, "refinery_pages"."view_template" AS t0_r14, "refinery_pages"."layout_template" AS t0_r15, "refinery_pages"."created_at" AS t0_r16, "refinery_pages"."updated_at" AS t0_r17, "parents_refinery_pages"."id" AS t1_r0, "parents_refinery_pages"."parent_id" AS t1_r1, "parents_refinery_pages"."path" AS t1_r2, "parents_refinery_pages"."slug" AS t1_r3, "parents_refinery_pages"."custom_slug" AS t1_r4, "parents_refinery_pages"."show_in_menu" AS t1_r5, "parents_refinery_pages"."link_url" AS t1_r6, "parents_refinery_pages"."menu_match" AS t1_r7, "parents_refinery_pages"."deletable" AS t1_r8, "parents_refinery_pages"."draft" AS t1_r9, "parents_refinery_pages"."skip_to_first_child" AS t1_r10, "parents_refinery_pages"."lft" AS t1_r11, "parents_refinery_pages"."rgt" AS t1_r12, "parents_refinery_pages"."depth" AS t1_r13, "parents_refinery_pages"."view_template" AS t1_r14, "parents_refinery_pages"."layout_template" AS t1_r15, "parents_refinery_pages"."created_at" AS t1_r16, "parents_refinery_pages"."updated_at" AS t1_r17, "refinery_page_translations"."id" AS t2_r0, "refinery_page_translations"."refinery_page_id" AS t2_r1, "refinery_page_translations"."locale" AS t2_r2, "refinery_page_translations"."created_at" AS t2_r3, "refinery_page_translations"."updated_at" AS t2_r4, "refinery_page_translations"."title" AS t2_r5, "refinery_page_translations"."custom_slug" AS t2_r6, "refinery_page_translations"."menu_title" AS t2_r7, "refinery_page_translations"."slug" AS t2_r8 FROM "refinery_pages" INNER JOIN "refinery_page_translations" ON "refinery_page_translations"."refinery_page_id" = "refinery_pages"."id" LEFT OUTER JOIN "refinery_pages" "parents_refinery_pages" ON "parents_refinery_pages"."id" = "refinery_pages"."parent_id" WHERE "refinery_pages"."draft" = 'f' AND "refinery_pages"."show_in_menu" = 't' AND "refinery_page_translations"."locale" = 'en'  ORDER BY "refinery_pages"."lft"[0m
+  [1m[35mRefinery::Page Load (0.1ms)[0m  SELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 4) AND ("refinery_pages"."rgt" >= 5)  ORDER BY "refinery_pages"."lft"
+  [1m[36mRefinery::Page::Translation Load (0.2ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 4)[0m
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_header.html.erb (13.1ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_footer.html.erb (0.2ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_javascripts.html.erb (93.3ms)
+Completed 200 OK in 280ms (Views: 276.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/blog" for ::1 at 2015-05-04 12:17:30 -0700
+Processing by Refinery::Blog::PostsController#index as HTML
+  Parameters: {"locale"=>:en}
+  [1m[35mRefinery::Page Load (0.2ms)[0m  SELECT  "refinery_pages".* FROM "refinery_pages" WHERE "refinery_pages"."link_url" = ? LIMIT 1  [["link_url", "/blog"]]
+  [1m[36mRefinery::PagePart Load (0.2ms)[0m  [1mSELECT "refinery_page_parts".* FROM "refinery_page_parts" WHERE "refinery_page_parts"."refinery_page_id" = ?  ORDER BY position ASC[0m  [["refinery_page_id", 9]]
+  [1m[35mRefinery::PagePart::Translation Load (0.3ms)[0m  SELECT "refinery_page_part_translations".* FROM "refinery_page_part_translations" WHERE "refinery_page_part_translations"."refinery_page_part_id" IN (16, 17)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "refinery_blog_posts" INNER JOIN "refinery_blog_post_translations" ON "refinery_blog_post_translations"."refinery_blog_post_id" = "refinery_blog_posts"."id" WHERE ("refinery_blog_posts"."published_at" < '2015-05-04 19:17:30.401524') AND "refinery_blog_posts"."draft" = 'f' AND "refinery_blog_post_translations"."locale" = 'en' AND "refinery_blog_post_translations"."locale" = 'en'[0m
+  [1m[35mRefinery::Blog::Post Load (0.2ms)[0m  SELECT  "refinery_blog_posts".* FROM "refinery_blog_posts" INNER JOIN "refinery_blog_post_translations" ON "refinery_blog_post_translations"."refinery_blog_post_id" = "refinery_blog_posts"."id" WHERE ("refinery_blog_posts"."published_at" < '2015-05-04 19:17:30.401524') AND "refinery_blog_posts"."draft" = 'f' AND "refinery_blog_post_translations"."locale" = 'en' AND "refinery_blog_post_translations"."locale" = 'en'  ORDER BY published_at DESC LIMIT 10 OFFSET 0
+  [1m[36mRefinery::Blog::Comment Load (0.2ms)[0m  [1mSELECT "refinery_blog_comments".* FROM "refinery_blog_comments" WHERE "refinery_blog_comments"."blog_post_id" IN (2, 1)[0m
+  [1m[35mRefinery::Blog::Categorization Load (0.2ms)[0m  SELECT "refinery_blog_categories_blog_posts".* FROM "refinery_blog_categories_blog_posts" WHERE "refinery_blog_categories_blog_posts"."blog_post_id" IN (2, 1)
+  [1m[36mRefinery::Blog::Category Load (0.2ms)[0m  [1mSELECT "refinery_blog_categories".* FROM "refinery_blog_categories" WHERE "refinery_blog_categories"."id" IN (1, 3)[0m
+  [1m[35mRefinery::Blog::Post::Translation Load (0.2ms)[0m  SELECT "refinery_blog_post_translations".* FROM "refinery_blog_post_translations" WHERE "refinery_blog_post_translations"."refinery_blog_post_id" = ?  [["refinery_blog_post_id", 2]]
+  [1m[36mRefinery::User Load (0.2ms)[0m  [1mSELECT  "refinery_users".* FROM "refinery_users" WHERE "refinery_users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "refinery_blog_categories" INNER JOIN "refinery_blog_category_translations" ON "refinery_blog_category_translations"."refinery_blog_category_id" = "refinery_blog_categories"."id" INNER JOIN "refinery_blog_categories_blog_posts" ON "refinery_blog_categories"."id" = "refinery_blog_categories_blog_posts"."blog_category_id" WHERE "refinery_blog_categories_blog_posts"."blog_post_id" = ? AND "refinery_blog_category_translations"."locale" = ?  [["blog_post_id", 2], ["locale", "en"]]
+  [1m[36mActsAsTaggableOn::Tag Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ? LIMIT 1[0m  [["taggable_id", 2], ["taggable_type", "Refinery::Blog::Post"], ["context", "tags"]]
+  [1m[35mRefinery::Setting Load (0.2ms)[0m  SELECT "refinery_settings"."value" FROM "refinery_settings" WHERE "refinery_settings"."scoping" = ? AND "refinery_settings"."name" = 'teasers_enabled'  [["scoping", "blog"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "refinery_settings"."value" FROM "refinery_settings" WHERE "refinery_settings"."scoping" = ? AND "refinery_settings"."name" = 'teasers_enabled'[0m  [["scoping", "blog"]]
+  [1m[35mRefinery::Setting Load (0.2ms)[0m  SELECT "refinery_settings"."value" FROM "refinery_settings" WHERE "refinery_settings"."scoping" = ? AND "refinery_settings"."name" = 'comments_allowed'  [["scoping", "blog"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "refinery_blog_comments" WHERE "refinery_blog_comments"."blog_post_id" = ? AND "refinery_blog_comments"."state" = ?[0m  [["blog_post_id", 2], ["state", "approved"]]
+  [1m[35mRefinery::Blog::Post::Translation Load (0.1ms)[0m  SELECT "refinery_blog_post_translations".* FROM "refinery_blog_post_translations" WHERE "refinery_blog_post_translations"."refinery_blog_post_id" = ?  [["refinery_blog_post_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "refinery_users".* FROM "refinery_users" WHERE "refinery_users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "refinery_blog_categories" INNER JOIN "refinery_blog_category_translations" ON "refinery_blog_category_translations"."refinery_blog_category_id" = "refinery_blog_categories"."id" INNER JOIN "refinery_blog_categories_blog_posts" ON "refinery_blog_categories"."id" = "refinery_blog_categories_blog_posts"."blog_category_id" WHERE "refinery_blog_categories_blog_posts"."blog_post_id" = ? AND "refinery_blog_category_translations"."locale" = ?  [["blog_post_id", 1], ["locale", "en"]]
+  [1m[36mRefinery::Blog::Category Load (0.1ms)[0m  [1mSELECT "refinery_blog_categories".* FROM "refinery_blog_categories" INNER JOIN "refinery_blog_category_translations" ON "refinery_blog_category_translations"."refinery_blog_category_id" = "refinery_blog_categories"."id" INNER JOIN "refinery_blog_categories_blog_posts" ON "refinery_blog_categories"."id" = "refinery_blog_categories_blog_posts"."blog_category_id" WHERE "refinery_blog_categories_blog_posts"."blog_post_id" = ? AND "refinery_blog_category_translations"."locale" = ?[0m  [["blog_post_id", 1], ["locale", "en"]]
+  [1m[35mRefinery::Blog::Category::Translation Load (0.2ms)[0m  SELECT "refinery_blog_category_translations".* FROM "refinery_blog_category_translations" WHERE "refinery_blog_category_translations"."refinery_blog_category_id" IN (1, 3)
+  [1m[36mActsAsTaggableOn::Tag Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ? LIMIT 1[0m  [["taggable_id", 1], ["taggable_type", "Refinery::Blog::Post"], ["context", "tags"]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?  [["taggable_id", 1], ["taggable_type", "Refinery::Blog::Post"], ["context", "tags"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "refinery_settings"."value" FROM "refinery_settings" WHERE "refinery_settings"."scoping" = ? AND "refinery_settings"."name" = 'teasers_enabled'[0m  [["scoping", "blog"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "refinery_settings"."value" FROM "refinery_settings" WHERE "refinery_settings"."scoping" = ? AND "refinery_settings"."name" = 'teasers_enabled'  [["scoping", "blog"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "refinery_settings"."value" FROM "refinery_settings" WHERE "refinery_settings"."scoping" = ? AND "refinery_settings"."name" = 'comments_allowed'[0m  [["scoping", "blog"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "refinery_blog_comments" WHERE "refinery_blog_comments"."blog_post_id" = ? AND "refinery_blog_comments"."state" = ?  [["blog_post_id", 1], ["state", "approved"]]
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-blog-09e4b6649878/app/views/refinery/blog/shared/_post.html.erb (163.6ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-blog-09e4b6649878/app/views/refinery/blog/shared/_rss_feed.html.erb (7.5ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "refinery_blog_categories" INNER JOIN "refinery_blog_category_translations" ON "refinery_blog_category_translations"."refinery_blog_category_id" = "refinery_blog_categories"."id" WHERE "refinery_blog_category_translations"."locale" = ?[0m  [["locale", "en"]]
+  [1m[35mRefinery::Blog::Category Load (0.1ms)[0m  SELECT "refinery_blog_categories".* FROM "refinery_blog_categories" INNER JOIN "refinery_blog_category_translations" ON "refinery_blog_category_translations"."refinery_blog_category_id" = "refinery_blog_categories"."id" WHERE "refinery_blog_category_translations"."locale" = ?  [["locale", "en"]]
+  [1m[36mRefinery::Blog::Category::Translation Load (0.2ms)[0m  [1mSELECT "refinery_blog_category_translations".* FROM "refinery_blog_category_translations" WHERE "refinery_blog_category_translations"."refinery_blog_category_id" IN (1, 2, 3)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "refinery_blog_posts" INNER JOIN "refinery_blog_post_translations" ON "refinery_blog_post_translations"."refinery_blog_post_id" = "refinery_blog_posts"."id" INNER JOIN "refinery_blog_categories_blog_posts" ON "refinery_blog_posts"."id" = "refinery_blog_categories_blog_posts"."blog_post_id" WHERE "refinery_blog_categories_blog_posts"."blog_category_id" = ? AND ("refinery_blog_posts"."published_at" < '2015-05-04 19:17:30.704403') AND "refinery_blog_posts"."draft" = 'f' AND "refinery_blog_post_translations"."locale" = 'en' AND "refinery_blog_post_translations"."locale" = 'en'  [["blog_category_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "refinery_blog_posts" INNER JOIN "refinery_blog_post_translations" ON "refinery_blog_post_translations"."refinery_blog_post_id" = "refinery_blog_posts"."id" INNER JOIN "refinery_blog_categories_blog_posts" ON "refinery_blog_posts"."id" = "refinery_blog_categories_blog_posts"."blog_post_id" WHERE "refinery_blog_categories_blog_posts"."blog_category_id" = ? AND ("refinery_blog_posts"."published_at" < '2015-05-04 19:17:30.710205') AND "refinery_blog_posts"."draft" = 'f' AND "refinery_blog_post_translations"."locale" = 'en' AND "refinery_blog_post_translations"."locale" = 'en'[0m  [["blog_category_id", 2]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "refinery_blog_posts" INNER JOIN "refinery_blog_post_translations" ON "refinery_blog_post_translations"."refinery_blog_post_id" = "refinery_blog_posts"."id" INNER JOIN "refinery_blog_categories_blog_posts" ON "refinery_blog_posts"."id" = "refinery_blog_categories_blog_posts"."blog_post_id" WHERE "refinery_blog_categories_blog_posts"."blog_category_id" = ? AND ("refinery_blog_posts"."published_at" < '2015-05-04 19:17:30.715078') AND "refinery_blog_posts"."draft" = 'f' AND "refinery_blog_post_translations"."locale" = 'en' AND "refinery_blog_post_translations"."locale" = 'en'  [["blog_category_id", 3]]
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-blog-09e4b6649878/app/views/refinery/blog/shared/_categories.html.erb (28.3ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "tags" JOIN (SELECT taggings.tag_id, COUNT(taggings.tag_id) AS tags_count FROM "taggings" INNER JOIN refinery_blog_posts ON refinery_blog_posts.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Refinery::Blog::Post' AND taggings.context = 'tags') AND (taggings.taggable_id IN(SELECT refinery_blog_posts.id FROM "refinery_blog_posts" INNER JOIN "refinery_blog_post_translations" ON "refinery_blog_post_translations"."refinery_blog_post_id" = "refinery_blog_posts"."id" WHERE ("refinery_blog_posts"."published_at" < '2015-05-04 19:17:30.402783') AND "refinery_blog_posts"."draft" = 'f' AND "refinery_blog_post_translations"."locale" = 'en')) GROUP BY taggings.tag_id HAVING COUNT(taggings.tag_id) > 0) AS taggings ON taggings.tag_id = tags.id[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "tags" JOIN (SELECT taggings.tag_id, COUNT(taggings.tag_id) AS tags_count FROM "taggings" INNER JOIN refinery_blog_posts ON refinery_blog_posts.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Refinery::Blog::Post' AND taggings.context = 'tags') AND (taggings.taggable_id IN(SELECT refinery_blog_posts.id FROM "refinery_blog_posts" INNER JOIN "refinery_blog_post_translations" ON "refinery_blog_post_translations"."refinery_blog_post_id" = "refinery_blog_posts"."id" WHERE ("refinery_blog_posts"."published_at" < '2015-05-04 19:17:30.402783') AND "refinery_blog_posts"."draft" = 'f' AND "refinery_blog_post_translations"."locale" = 'en')) GROUP BY taggings.tag_id HAVING COUNT(taggings.tag_id) > 0) AS taggings ON taggings.tag_id = tags.id
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT tags.*, taggings.tags_count AS count FROM "tags" JOIN (SELECT taggings.tag_id, COUNT(taggings.tag_id) AS tags_count FROM "taggings" INNER JOIN refinery_blog_posts ON refinery_blog_posts.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Refinery::Blog::Post' AND taggings.context = 'tags') AND (taggings.taggable_id IN(SELECT refinery_blog_posts.id FROM "refinery_blog_posts" INNER JOIN "refinery_blog_post_translations" ON "refinery_blog_post_translations"."refinery_blog_post_id" = "refinery_blog_posts"."id" WHERE ("refinery_blog_posts"."published_at" < '2015-05-04 19:17:30.402783') AND "refinery_blog_posts"."draft" = 'f' AND "refinery_blog_post_translations"."locale" = 'en')) GROUP BY taggings.tag_id HAVING COUNT(taggings.tag_id) > 0) AS taggings ON taggings.tag_id = tags.id[0m
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-blog-09e4b6649878/app/views/refinery/blog/shared/_tags.html.erb (4.9ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-blog-09e4b6649878/app/views/refinery/blog/shared/_posts.html.erb (5.6ms)
+  [1m[35mRefinery::Blog::Post Load (0.2ms)[0m  SELECT "refinery_blog_posts"."published_at" FROM "refinery_blog_posts" INNER JOIN "refinery_blog_post_translations" ON "refinery_blog_post_translations"."refinery_blog_post_id" = "refinery_blog_posts"."id" WHERE ("refinery_blog_posts"."published_at" < '2015-05-01 07:00:00.000000') AND "refinery_blog_posts"."draft" = 'f' AND "refinery_blog_post_translations"."locale" = 'en'  ORDER BY published_at DESC
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-blog-09e4b6649878/app/views/refinery/blog/shared/_body_content_right.html.erb (62.6ms)
+  [1m[36mRefinery::Page::Translation Load (0.1ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" = ?[0m  [["refinery_page_id", 9]]
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_content_page.html.erb (2.1ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-blog-09e4b6649878/app/views/refinery/blog/posts/index.html.erb within layouts/application (352.4ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_html_tag.html.erb (0.1ms)
+  [1m[35mRefinery::User Load (0.1ms)[0m  SELECT  "refinery_users".* FROM "refinery_users" WHERE "refinery_users"."id" = ?  ORDER BY "refinery_users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRefinery::Role Load (0.1ms)[0m  [1mSELECT "refinery_roles".* FROM "refinery_roles" INNER JOIN "refinery_roles_users" ON "refinery_roles"."id" = "refinery_roles_users"."role_id" WHERE "refinery_roles_users"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_site_bar.html.erb (17.7ms)
+  [1m[35mSeoMetum Load (0.1ms)[0m  SELECT  "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = ? AND "seo_meta"."seo_meta_id" = ?  ORDER BY "seo_meta"."id" ASC LIMIT 1  [["seo_meta_type", "Refinery::Page::Translation"], ["seo_meta_id", 9]]
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_google_analytics.html.erb (0.1ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_head.html.erb (43.7ms)
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT "refinery_pages"."id" AS t0_r0, "refinery_pages"."parent_id" AS t0_r1, "refinery_pages"."path" AS t0_r2, "refinery_pages"."slug" AS t0_r3, "refinery_pages"."custom_slug" AS t0_r4, "refinery_pages"."show_in_menu" AS t0_r5, "refinery_pages"."link_url" AS t0_r6, "refinery_pages"."menu_match" AS t0_r7, "refinery_pages"."deletable" AS t0_r8, "refinery_pages"."draft" AS t0_r9, "refinery_pages"."skip_to_first_child" AS t0_r10, "refinery_pages"."lft" AS t0_r11, "refinery_pages"."rgt" AS t0_r12, "refinery_pages"."depth" AS t0_r13, "refinery_pages"."view_template" AS t0_r14, "refinery_pages"."layout_template" AS t0_r15, "refinery_pages"."created_at" AS t0_r16, "refinery_pages"."updated_at" AS t0_r17, "parents_refinery_pages"."id" AS t1_r0, "parents_refinery_pages"."parent_id" AS t1_r1, "parents_refinery_pages"."path" AS t1_r2, "parents_refinery_pages"."slug" AS t1_r3, "parents_refinery_pages"."custom_slug" AS t1_r4, "parents_refinery_pages"."show_in_menu" AS t1_r5, "parents_refinery_pages"."link_url" AS t1_r6, "parents_refinery_pages"."menu_match" AS t1_r7, "parents_refinery_pages"."deletable" AS t1_r8, "parents_refinery_pages"."draft" AS t1_r9, "parents_refinery_pages"."skip_to_first_child" AS t1_r10, "parents_refinery_pages"."lft" AS t1_r11, "parents_refinery_pages"."rgt" AS t1_r12, "parents_refinery_pages"."depth" AS t1_r13, "parents_refinery_pages"."view_template" AS t1_r14, "parents_refinery_pages"."layout_template" AS t1_r15, "parents_refinery_pages"."created_at" AS t1_r16, "parents_refinery_pages"."updated_at" AS t1_r17, "refinery_page_translations"."id" AS t2_r0, "refinery_page_translations"."refinery_page_id" AS t2_r1, "refinery_page_translations"."locale" AS t2_r2, "refinery_page_translations"."created_at" AS t2_r3, "refinery_page_translations"."updated_at" AS t2_r4, "refinery_page_translations"."title" AS t2_r5, "refinery_page_translations"."custom_slug" AS t2_r6, "refinery_page_translations"."menu_title" AS t2_r7, "refinery_page_translations"."slug" AS t2_r8 FROM "refinery_pages" INNER JOIN "refinery_page_translations" ON "refinery_page_translations"."refinery_page_id" = "refinery_pages"."id" LEFT OUTER JOIN "refinery_pages" "parents_refinery_pages" ON "parents_refinery_pages"."id" = "refinery_pages"."parent_id" WHERE "refinery_pages"."draft" = 'f' AND "refinery_pages"."show_in_menu" = 't' AND "refinery_page_translations"."locale" = 'en'  ORDER BY "refinery_pages"."lft"[0m
+  [1m[35mRefinery::Page Load (0.1ms)[0m  SELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 4) AND ("refinery_pages"."rgt" >= 5)  ORDER BY "refinery_pages"."lft"
+  [1m[36mRefinery::Page::Translation Load (0.2ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 4)[0m
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_header.html.erb (14.3ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_footer.html.erb (0.2ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_javascripts.html.erb (49.5ms)
+Completed 200 OK in 599ms (Views: 573.2ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/" for ::1 at 2015-05-04 12:17:37 -0700
+Processing by Refinery::PagesController#home as HTML
+  Parameters: {"locale"=>:en}
+  [1m[35mRefinery::Page Load (0.1ms)[0m  SELECT  "refinery_pages".* FROM "refinery_pages" WHERE "refinery_pages"."link_url" = ?  ORDER BY "refinery_pages"."id" ASC LIMIT 1  [["link_url", "/"]]
+  [1m[36mRefinery::Page::Translation Load (0.1ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" = ?[0m  [["refinery_page_id", 1]]
+  [1m[35mRefinery::PagePart Load (0.5ms)[0m  SELECT "refinery_page_parts".* FROM "refinery_page_parts" WHERE "refinery_page_parts"."refinery_page_id" = ?  ORDER BY position ASC  [["refinery_page_id", 1]]
+  [1m[36mRefinery::PagePart::Translation Load (0.2ms)[0m  [1mSELECT "refinery_page_part_translations".* FROM "refinery_page_part_translations" WHERE "refinery_page_part_translations"."refinery_page_part_id" IN (1, 2)[0m
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_content_page.html.erb (6.4ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/pages/home.html.erb within layouts/application (22.3ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_html_tag.html.erb (0.5ms)
+  [1m[35mRefinery::User Load (0.1ms)[0m  SELECT  "refinery_users".* FROM "refinery_users" WHERE "refinery_users"."id" = ?  ORDER BY "refinery_users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRefinery::Role Load (0.1ms)[0m  [1mSELECT "refinery_roles".* FROM "refinery_roles" INNER JOIN "refinery_roles_users" ON "refinery_roles"."id" = "refinery_roles_users"."role_id" WHERE "refinery_roles_users"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_site_bar.html.erb (26.0ms)
+  [1m[35mSeoMetum Load (0.1ms)[0m  SELECT  "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = ? AND "seo_meta"."seo_meta_id" = ?  ORDER BY "seo_meta"."id" ASC LIMIT 1  [["seo_meta_type", "Refinery::Page::Translation"], ["seo_meta_id", 1]]
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_google_analytics.html.erb (0.5ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_head.html.erb (56.2ms)
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT "refinery_pages"."id" AS t0_r0, "refinery_pages"."parent_id" AS t0_r1, "refinery_pages"."path" AS t0_r2, "refinery_pages"."slug" AS t0_r3, "refinery_pages"."custom_slug" AS t0_r4, "refinery_pages"."show_in_menu" AS t0_r5, "refinery_pages"."link_url" AS t0_r6, "refinery_pages"."menu_match" AS t0_r7, "refinery_pages"."deletable" AS t0_r8, "refinery_pages"."draft" AS t0_r9, "refinery_pages"."skip_to_first_child" AS t0_r10, "refinery_pages"."lft" AS t0_r11, "refinery_pages"."rgt" AS t0_r12, "refinery_pages"."depth" AS t0_r13, "refinery_pages"."view_template" AS t0_r14, "refinery_pages"."layout_template" AS t0_r15, "refinery_pages"."created_at" AS t0_r16, "refinery_pages"."updated_at" AS t0_r17, "parents_refinery_pages"."id" AS t1_r0, "parents_refinery_pages"."parent_id" AS t1_r1, "parents_refinery_pages"."path" AS t1_r2, "parents_refinery_pages"."slug" AS t1_r3, "parents_refinery_pages"."custom_slug" AS t1_r4, "parents_refinery_pages"."show_in_menu" AS t1_r5, "parents_refinery_pages"."link_url" AS t1_r6, "parents_refinery_pages"."menu_match" AS t1_r7, "parents_refinery_pages"."deletable" AS t1_r8, "parents_refinery_pages"."draft" AS t1_r9, "parents_refinery_pages"."skip_to_first_child" AS t1_r10, "parents_refinery_pages"."lft" AS t1_r11, "parents_refinery_pages"."rgt" AS t1_r12, "parents_refinery_pages"."depth" AS t1_r13, "parents_refinery_pages"."view_template" AS t1_r14, "parents_refinery_pages"."layout_template" AS t1_r15, "parents_refinery_pages"."created_at" AS t1_r16, "parents_refinery_pages"."updated_at" AS t1_r17, "refinery_page_translations"."id" AS t2_r0, "refinery_page_translations"."refinery_page_id" AS t2_r1, "refinery_page_translations"."locale" AS t2_r2, "refinery_page_translations"."created_at" AS t2_r3, "refinery_page_translations"."updated_at" AS t2_r4, "refinery_page_translations"."title" AS t2_r5, "refinery_page_translations"."custom_slug" AS t2_r6, "refinery_page_translations"."menu_title" AS t2_r7, "refinery_page_translations"."slug" AS t2_r8 FROM "refinery_pages" INNER JOIN "refinery_page_translations" ON "refinery_page_translations"."refinery_page_id" = "refinery_pages"."id" LEFT OUTER JOIN "refinery_pages" "parents_refinery_pages" ON "parents_refinery_pages"."id" = "refinery_pages"."parent_id" WHERE "refinery_pages"."draft" = 'f' AND "refinery_pages"."show_in_menu" = 't' AND "refinery_page_translations"."locale" = 'en'  ORDER BY "refinery_pages"."lft"[0m
+  [1m[35mRefinery::Page Load (0.1ms)[0m  SELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 4) AND ("refinery_pages"."rgt" >= 5)  ORDER BY "refinery_pages"."lft"
+  [1m[36mRefinery::Page::Translation Load (0.3ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 4)[0m
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_header.html.erb (16.9ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_footer.html.erb (0.6ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_javascripts.html.erb (35.9ms)
+Completed 200 OK in 286ms (Views: 282.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/refinery" for ::1 at 2015-05-04 12:18:06 -0700
+Processing by Refinery::Admin::CoreController#index as HTML
+  Parameters: {"locale"=>:en}
+  [1m[35mRefinery::Role Load (0.2ms)[0m  SELECT  "refinery_roles".* FROM "refinery_roles" WHERE "refinery_roles"."title" = ?  ORDER BY "refinery_roles"."id" ASC LIMIT 1  [["title", "Refinery"]]
+  [1m[36mRefinery::User Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "refinery_users" INNER JOIN "refinery_roles_users" ON "refinery_users"."id" = "refinery_roles_users"."user_id" WHERE "refinery_roles_users"."role_id" = ? LIMIT 1[0m  [["role_id", 1]]
+  [1m[35mRefinery::User Load (0.1ms)[0m  SELECT  "refinery_users".* FROM "refinery_users" WHERE "refinery_users"."id" = ?  ORDER BY "refinery_users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRefinery::UserPlugin Load (0.1ms)[0m  [1mSELECT "refinery_user_plugins".* FROM "refinery_user_plugins" WHERE "refinery_user_plugins"."user_id" = ?  ORDER BY position ASC[0m  [["user_id", 1]]
+  [1m[35mRefinery::Role Load (0.1ms)[0m  SELECT "refinery_roles".* FROM "refinery_roles" INNER JOIN "refinery_roles_users" ON "refinery_roles"."id" = "refinery_roles_users"."role_id" WHERE "refinery_roles_users"."user_id" = ?  [["user_id", 1]]
+Redirected to http://localhost:3000/refinery/users
+Completed 302 Found in 49ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/refinery/users" for ::1 at 2015-05-04 12:18:06 -0700
+Processing by Refinery::Admin::UsersController#index as HTML
+  Parameters: {"locale"=>:en}
+  [1m[36mRefinery::Role Load (0.4ms)[0m  [1mSELECT  "refinery_roles".* FROM "refinery_roles" WHERE "refinery_roles"."title" = ?  ORDER BY "refinery_roles"."id" ASC LIMIT 1[0m  [["title", "Refinery"]]
+  [1m[35mRefinery::User Exists (0.1ms)[0m  SELECT  1 AS one FROM "refinery_users" INNER JOIN "refinery_roles_users" ON "refinery_users"."id" = "refinery_roles_users"."user_id" WHERE "refinery_roles_users"."role_id" = ? LIMIT 1  [["role_id", 1]]
+  [1m[36mRefinery::User Load (0.1ms)[0m  [1mSELECT  "refinery_users".* FROM "refinery_users" WHERE "refinery_users"."id" = ?  ORDER BY "refinery_users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRefinery::UserPlugin Load (0.1ms)[0m  SELECT "refinery_user_plugins".* FROM "refinery_user_plugins" WHERE "refinery_user_plugins"."user_id" = ?  ORDER BY position ASC  [["user_id", 1]]
+  [1m[36mRefinery::Role Load (0.1ms)[0m  [1mSELECT "refinery_roles".* FROM "refinery_roles" INNER JOIN "refinery_roles_users" ON "refinery_roles"."id" = "refinery_roles_users"."role_id" WHERE "refinery_roles_users"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/refinerycms-acts-as-indexed-2.0.1/app/views/refinery/acts_as_indexed/admin/_search_header.html.erb (0.6ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_search_header.html.erb (4.6ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "refinery_users"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "refinery_users"[0m
+  [1m[35mRefinery::User Load (0.2ms)[0m  SELECT  "refinery_users".* FROM "refinery_users"  ORDER BY username ASC LIMIT 20 OFFSET 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "refinery_roles".* FROM "refinery_roles" INNER JOIN "refinery_roles_users" ON "refinery_roles"."id" = "refinery_roles_users"."role_id" WHERE "refinery_roles_users"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/authentication/app/views/refinery/admin/users/_user.html.erb (9.3ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/authentication/app/views/refinery/admin/users/_users.html.erb (21.0ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/authentication/app/views/refinery/admin/users/_records.html.erb (56.5ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/refinerycms-acts-as-indexed-2.0.1/app/views/refinery/acts_as_indexed/admin/_search.html.erb (6.1ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_search.html.erb (8.8ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/authentication/app/views/refinery/admin/users/_actions.html.erb (26.4ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/authentication/app/views/refinery/admin/users/index.html.erb within layouts/refinery/admin (104.7ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_html_tag.html.erb (0.1ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_javascripts.html.erb (1049.1ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_head.html.erb (2614.9ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_site_bar.html.erb (6.1ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_menu.html.erb (15.9ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_no_script.html.erb (0.6ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_message.html.erb (0.4ms)
+Completed 200 OK in 2861ms (Views: 2851.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/refinery/pages" for ::1 at 2015-05-04 12:18:11 -0700
+Processing by Refinery::Admin::PagesController#index as HTML
+  Parameters: {"locale"=>:en}
+  [1m[35mRefinery::Role Load (0.1ms)[0m  SELECT  "refinery_roles".* FROM "refinery_roles" WHERE "refinery_roles"."title" = ?  ORDER BY "refinery_roles"."id" ASC LIMIT 1  [["title", "Refinery"]]
+  [1m[36mRefinery::User Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "refinery_users" INNER JOIN "refinery_roles_users" ON "refinery_users"."id" = "refinery_roles_users"."user_id" WHERE "refinery_roles_users"."role_id" = ? LIMIT 1[0m  [["role_id", 1]]
+  [1m[35mRefinery::User Load (0.1ms)[0m  SELECT  "refinery_users".* FROM "refinery_users" WHERE "refinery_users"."id" = ?  ORDER BY "refinery_users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRefinery::UserPlugin Load (0.1ms)[0m  [1mSELECT "refinery_user_plugins".* FROM "refinery_user_plugins" WHERE "refinery_user_plugins"."user_id" = ?  ORDER BY position ASC[0m  [["user_id", 1]]
+  [1m[35mRefinery::Role Load (0.1ms)[0m  SELECT "refinery_roles".* FROM "refinery_roles" INNER JOIN "refinery_roles_users" ON "refinery_roles"."id" = "refinery_roles_users"."role_id" WHERE "refinery_roles_users"."user_id" = ?  [["user_id", 1]]
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/refinerycms-acts-as-indexed-2.0.1/app/views/refinery/acts_as_indexed/admin/_search_header.html.erb (0.1ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_search_header.html.erb (2.0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "refinery_pages"[0m
+  [1m[35mRefinery::Page Load (0.2ms)[0m  SELECT "refinery_pages".* FROM "refinery_pages" WHERE "refinery_pages"."parent_id" IS NULL  ORDER BY lft ASC, "refinery_pages"."lft"
+  [1m[36mRefinery::Page::Translation Load (0.2ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 3, 5, 6, 7, 8, 9)[0m
+  [1m[35mRefinery::Page Load (0.2ms)[0m  SELECT "refinery_pages".* FROM "refinery_pages" WHERE "refinery_pages"."parent_id" IN (1, 3, 5, 6, 7, 8, 9)  ORDER BY "lft"
+  [1m[36mRefinery::Page::Translation Load (0.2ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" = ?[0m  [["refinery_page_id", 2]]
+  [1m[35mRefinery::Page Load (0.2ms)[0m  SELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 2) AND ("refinery_pages"."rgt" >= 3)  ORDER BY "refinery_pages"."lft"
+  [1m[36mRefinery::Page::Translation Load (0.2ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 2) AND ("refinery_pages"."rgt" >= 3)  ORDER BY "refinery_pages"."lft"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 2)[0m
+  [1m[35mRefinery::Page Load (0.2ms)[0m  SELECT "refinery_pages".* FROM "refinery_pages" WHERE "refinery_pages"."parent_id" = ?  ORDER BY "lft"  [["parent_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 2) AND ("refinery_pages"."rgt" >= 3)  ORDER BY "refinery_pages"."lft"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 2) AND ("refinery_pages"."rgt" >= 3)  ORDER BY "refinery_pages"."lft"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 2)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_page.html.erb (0.0ms)
+  [1m[36mRefinery::Page::Translation Load (0.1ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" = ?[0m  [["refinery_page_id", 4]]
+  [1m[35mRefinery::Page Load (0.2ms)[0m  SELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 4) AND ("refinery_pages"."rgt" >= 5)  ORDER BY "refinery_pages"."lft"
+  [1m[36mRefinery::Page::Translation Load (0.2ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 4)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 4) AND ("refinery_pages"."rgt" >= 5)  ORDER BY "refinery_pages"."lft"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 4)[0m
+  [1m[35mRefinery::Page Load (0.1ms)[0m  SELECT "refinery_pages".* FROM "refinery_pages" WHERE "refinery_pages"."parent_id" = ?  ORDER BY "lft"  [["parent_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 4) AND ("refinery_pages"."rgt" >= 5)  ORDER BY "refinery_pages"."lft"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 4)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 4) AND ("refinery_pages"."rgt" >= 5)  ORDER BY "refinery_pages"."lft"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 4)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_page.html.erb (0.0ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_page.html.erb (61.5ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_page.html.erb (0.0ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_page.html.erb (0.0ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_page.html.erb (0.0ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_page.html.erb (0.0ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_page.html.erb (0.0ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_page.html.erb (0.0ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_page.html.erb (193.5ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_sortable_list.html.erb (0.6ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_sortable_list.html.erb (229.4ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_records.html.erb (255.0ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/refinerycms-acts-as-indexed-2.0.1/app/views/refinery/acts_as_indexed/admin/_search.html.erb (0.5ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_search.html.erb (2.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "refinery_pages"[0m
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_actions.html.erb (22.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "refinery_pages"
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_make_sortable.html.erb (85.4ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/index.html.erb within layouts/refinery/admin (387.8ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_html_tag.html.erb (0.1ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_javascripts.html.erb (259.8ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_head.html.erb (325.0ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_site_bar.html.erb (6.6ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_menu.html.erb (22.3ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_no_script.html.erb (0.2ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_message.html.erb (0.1ms)
+Completed 200 OK in 827ms (Views: 819.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/refinery/pages/home/home-page/edit" for ::1 at 2015-05-04 12:18:16 -0700
+Processing by Refinery::Admin::PagesController#edit as HTML
+  Parameters: {"path"=>"home/home-page", "locale"=>:en}
+  [1m[36mRefinery::Page Load (0.3ms)[0m  [1mSELECT  "refinery_pages".* FROM "refinery_pages" INNER JOIN "refinery_page_translations" ON "refinery_page_translations"."refinery_page_id" = "refinery_pages"."id" WHERE "refinery_pages"."parent_id" IS NULL AND "refinery_page_translations"."locale" = 'en' AND "refinery_page_translations"."slug" = 'home'  ORDER BY "refinery_pages"."id" ASC LIMIT 1[0m
+  [1m[35mRefinery::Page Load (0.2ms)[0m  SELECT  "refinery_pages".* FROM "refinery_pages" INNER JOIN "refinery_page_translations" ON "refinery_page_translations"."refinery_page_id" = "refinery_pages"."id" WHERE "refinery_pages"."parent_id" = ? AND "refinery_page_translations"."locale" = 'en' AND "refinery_page_translations"."slug" = 'home-page'  ORDER BY "lft" LIMIT 1  [["parent_id", 1]]
+  [1m[36mRefinery::Role Load (0.1ms)[0m  [1mSELECT  "refinery_roles".* FROM "refinery_roles" WHERE "refinery_roles"."title" = ?  ORDER BY "refinery_roles"."id" ASC LIMIT 1[0m  [["title", "Refinery"]]
+  [1m[35mRefinery::User Exists (0.1ms)[0m  SELECT  1 AS one FROM "refinery_users" INNER JOIN "refinery_roles_users" ON "refinery_users"."id" = "refinery_roles_users"."user_id" WHERE "refinery_roles_users"."role_id" = ? LIMIT 1  [["role_id", 1]]
+  [1m[36mRefinery::User Load (0.1ms)[0m  [1mSELECT  "refinery_users".* FROM "refinery_users" WHERE "refinery_users"."id" = ?  ORDER BY "refinery_users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRefinery::UserPlugin Load (0.1ms)[0m  SELECT "refinery_user_plugins".* FROM "refinery_user_plugins" WHERE "refinery_user_plugins"."user_id" = ?  ORDER BY position ASC  [["user_id", 1]]
+  [1m[36mRefinery::Role Load (0.1ms)[0m  [1mSELECT "refinery_roles".* FROM "refinery_roles" INNER JOIN "refinery_roles_users" ON "refinery_roles"."id" = "refinery_roles_users"."role_id" WHERE "refinery_roles_users"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mRefinery::Page::Translation Load (0.1ms)[0m  SELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" = ?  [["refinery_page_id", 4]]
+  [1m[36mRefinery::Page Load (0.2ms)[0m  [1mSELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 4) AND ("refinery_pages"."rgt" >= 5)  ORDER BY "refinery_pages"."lft"[0m
+  [1m[35mRefinery::Page::Translation Load (0.2ms)[0m  SELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 4)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_error_messages.html.erb (3.3ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_locale_picker.html.erb (1.0ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_form_fields_after_title.html.erb (0.2ms)
+  [1m[36mRefinery::PagePart Load (0.1ms)[0m  [1mSELECT "refinery_page_parts".* FROM "refinery_page_parts" WHERE "refinery_page_parts"."refinery_page_id" = ?  ORDER BY position ASC[0m  [["refinery_page_id", 4]]
+  [1m[35mRefinery::PagePart::Translation Load (0.2ms)[0m  SELECT "refinery_page_part_translations".* FROM "refinery_page_part_translations" WHERE "refinery_page_part_translations"."refinery_page_part_id" IN (6, 7)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_page_part_field.html.erb (1.1ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_page_part_field.html.erb (0.5ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_form_page_parts.html.erb (19.4ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_form_advanced_options_menu.html.erb (2.8ms)
+  [1m[36mRefinery::Page Load (0.3ms)[0m  [1mSELECT "refinery_pages".* FROM "refinery_pages" WHERE "refinery_pages"."parent_id" IS NULL  ORDER BY "refinery_pages"."lft"[0m
+  [1m[35mRefinery::Page Load (0.1ms)[0m  SELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" >= 1) AND ("refinery_pages"."lft" < 6)  ORDER BY "refinery_pages"."lft"
+  [1m[36mRefinery::Page Load (0.2ms)[0m  [1mSELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" >= 7) AND ("refinery_pages"."lft" < 8)  ORDER BY "refinery_pages"."lft"[0m
+  [1m[35mRefinery::Page Load (0.1ms)[0m  SELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" >= 9) AND ("refinery_pages"."lft" < 10)  ORDER BY "refinery_pages"."lft"
+  [1m[36mRefinery::Page Load (0.1ms)[0m  [1mSELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" >= 11) AND ("refinery_pages"."lft" < 12)  ORDER BY "refinery_pages"."lft"[0m
+  [1m[35mRefinery::Page Load (0.1ms)[0m  SELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" >= 13) AND ("refinery_pages"."lft" < 14)  ORDER BY "refinery_pages"."lft"
+  [1m[36mRefinery::Page Load (0.1ms)[0m  [1mSELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" >= 15) AND ("refinery_pages"."lft" < 16)  ORDER BY "refinery_pages"."lft"[0m
+  [1m[35mRefinery::Page Load (0.1ms)[0m  SELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" >= 17) AND ("refinery_pages"."lft" < 18)  ORDER BY "refinery_pages"."lft"
+  [1m[36mRefinery::Page::Translation Load (0.5ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 2, 3, 5, 6, 7, 8, 9)[0m
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_form_extra_fields_for_more_options.html.erb (0.3ms)
+  [1m[35mSeoMetum Load (0.1ms)[0m  SELECT  "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = ? AND "seo_meta"."seo_meta_id" = ?  ORDER BY "seo_meta"."id" ASC LIMIT 1  [["seo_meta_type", "Refinery::Page::Translation"], ["seo_meta_id", 4]]
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/seo_meta-2.0.0.rc.1/app/views/seo_meta/_form.html.erb (3.0ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_form_advanced_options_seo.html.erb (7.8ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_form_advanced_options.html.erb (54.9ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_continue_editing.html.erb (0.5ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_form_actions.html.erb (20.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 4) AND ("refinery_pages"."rgt" >= 5)  ORDER BY "refinery_pages"."lft"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 4)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_form.html.erb (189.3ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/edit.html.erb within layouts/refinery/admin (197.4ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_html_tag.html.erb (0.1ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_javascripts.html.erb (241.3ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_head.html.erb (313.8ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_site_bar.html.erb (5.2ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_menu.html.erb (14.6ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_no_script.html.erb (0.2ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_message.html.erb (0.1ms)
+Completed 200 OK in 620ms (Views: 609.6ms | ActiveRecord: 3.3ms)
+
+
+Started PATCH "/refinery/pages/home/home-page" for ::1 at 2015-05-04 12:18:25 -0700
+Processing by Refinery::Admin::PagesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RP+Qth5VQzaY6NYPpGlh1SRcbZDK2SlydpiFVat78FX4C9xbzGEyTbUO/VC2H2HlslPT52P4FqCoNF/xPP8UXg==", "switch_locale"=>"en", "page"=>{"title"=>"Home Page", "parts_attributes"=>{"0"=>{"body"=>"<div class=\"row\">\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-md-8\">.col-md-8</div>\r\n  <div class=\"col-md-4\">.col-md-4</div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-md-4\">.col-md-4</div>\r\n  <div class=\"col-md-4\">.col-md-4</div>\r\n  <div class=\"col-md-4\">.col-md-4</div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-md-6\">.col-md-6</div>\r\n  <div class=\"col-md-6\">.col-md-6</div>\r\n</div>", "position"=>"0", "id"=>"6"}, "1"=>{"body"=>"", "position"=>"1", "id"=>"7"}}, "draft"=>"0", "parent_id"=>"1", "view_template"=>"show", "menu_title"=>"", "skip_to_first_child"=>"0", "link_url"=>"", "show_in_menu"=>"1", "browser_title"=>"", "meta_description"=>""}, "continue_editing"=>"false", "path"=>"home/home-page", "locale"=>:en}
+  [1m[36mRefinery::Page Load (0.3ms)[0m  [1mSELECT  "refinery_pages".* FROM "refinery_pages" INNER JOIN "refinery_page_translations" ON "refinery_page_translations"."refinery_page_id" = "refinery_pages"."id" WHERE "refinery_pages"."parent_id" IS NULL AND "refinery_page_translations"."locale" = 'en' AND "refinery_page_translations"."slug" = 'home'  ORDER BY "refinery_pages"."id" ASC LIMIT 1[0m
+  [1m[35mRefinery::Page Load (0.2ms)[0m  SELECT  "refinery_pages".* FROM "refinery_pages" INNER JOIN "refinery_page_translations" ON "refinery_page_translations"."refinery_page_id" = "refinery_pages"."id" WHERE "refinery_pages"."parent_id" = ? AND "refinery_page_translations"."locale" = 'en' AND "refinery_page_translations"."slug" = 'home-page'  ORDER BY "lft" LIMIT 1  [["parent_id", 1]]
+  [1m[36mRefinery::Role Load (0.1ms)[0m  [1mSELECT  "refinery_roles".* FROM "refinery_roles" WHERE "refinery_roles"."title" = ?  ORDER BY "refinery_roles"."id" ASC LIMIT 1[0m  [["title", "Refinery"]]
+  [1m[35mRefinery::User Exists (0.1ms)[0m  SELECT  1 AS one FROM "refinery_users" INNER JOIN "refinery_roles_users" ON "refinery_users"."id" = "refinery_roles_users"."user_id" WHERE "refinery_roles_users"."role_id" = ? LIMIT 1  [["role_id", 1]]
+  [1m[36mRefinery::User Load (0.1ms)[0m  [1mSELECT  "refinery_users".* FROM "refinery_users" WHERE "refinery_users"."id" = ?  ORDER BY "refinery_users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRefinery::UserPlugin Load (0.1ms)[0m  SELECT "refinery_user_plugins".* FROM "refinery_user_plugins" WHERE "refinery_user_plugins"."user_id" = ?  ORDER BY position ASC  [["user_id", 1]]
+  [1m[36mRefinery::Role Load (0.1ms)[0m  [1mSELECT "refinery_roles".* FROM "refinery_roles" INNER JOIN "refinery_roles_users" ON "refinery_roles"."id" = "refinery_roles_users"."role_id" WHERE "refinery_roles_users"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mRefinery::Page::Translation Load (0.1ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" = ?[0m  [["refinery_page_id", 4]]
+  [1m[35mSeoMetum Load (0.0ms)[0m  SELECT  "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = ? AND "seo_meta"."seo_meta_id" = ?  ORDER BY "seo_meta"."id" ASC LIMIT 1  [["seo_meta_type", "Refinery::Page::Translation"], ["seo_meta_id", 4]]
+  [1m[36mRefinery::PagePart Load (0.2ms)[0m  [1mSELECT "refinery_page_parts".* FROM "refinery_page_parts" WHERE "refinery_page_parts"."refinery_page_id" = ? AND "refinery_page_parts"."id" IN (6, 7)  ORDER BY position ASC[0m  [["refinery_page_id", 4]]
+  [1m[35mRefinery::PagePart::Translation Load (0.1ms)[0m  SELECT "refinery_page_part_translations".* FROM "refinery_page_part_translations" WHERE "refinery_page_part_translations"."refinery_page_part_id" IN (6, 7)
+  [1m[36mRefinery::PagePart Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "refinery_page_parts" WHERE ("refinery_page_parts"."title" = 'Body' AND "refinery_page_parts"."id" != 6 AND "refinery_page_parts"."refinery_page_id" = 4) LIMIT 1[0m
+  [1m[35mRefinery::Page Load (0.1ms)[0m  SELECT  "refinery_pages".* FROM "refinery_pages" WHERE "refinery_pages"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" = ?[0m  [["refinery_page_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = ? AND "seo_meta"."seo_meta_id" = ?  ORDER BY "seo_meta"."id" ASC LIMIT 1  [["seo_meta_type", "Refinery::Page::Translation"], ["seo_meta_id", 4]]
+  [1m[36mRefinery::PagePart Load (0.1ms)[0m  [1mSELECT "refinery_page_parts".* FROM "refinery_page_parts" WHERE "refinery_page_parts"."refinery_page_id" = ?  ORDER BY position ASC[0m  [["refinery_page_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "refinery_page_part_translations".* FROM "refinery_page_part_translations" WHERE "refinery_page_part_translations"."refinery_page_part_id" IN (6, 7)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "refinery_page_parts".* FROM "refinery_page_parts" WHERE "refinery_page_parts"."refinery_page_id" = ?  ORDER BY position ASC[0m  [["refinery_page_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "refinery_page_part_translations".* FROM "refinery_page_part_translations" WHERE "refinery_page_part_translations"."refinery_page_part_id" IN (6, 7)
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "refinery_page_parts" SET "updated_at" = ? WHERE "refinery_page_parts"."id" = ?[0m  [["updated_at", "2015-05-04 19:18:25.620970"], ["id", 6]]
+  [1m[35mSQL (0.1ms)[0m  UPDATE "refinery_page_part_translations" SET "body" = ?, "updated_at" = ? WHERE "refinery_page_part_translations"."id" = ?  [["body", "<div class=\"row\">\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-md-8\">.col-md-8</div>\r\n  <div class=\"col-md-4\">.col-md-4</div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-md-4\">.col-md-4</div>\r\n  <div class=\"col-md-4\">.col-md-4</div>\r\n  <div class=\"col-md-4\">.col-md-4</div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-md-6\">.col-md-6</div>\r\n  <div class=\"col-md-6\">.col-md-6</div>\r\n</div>"], ["updated_at", "2015-05-04 19:18:25.623551"], ["id", 6]]
+  [1m[36mRefinery::Page Load (0.0ms)[0m  [1mSELECT  "refinery_pages".* FROM "refinery_pages" WHERE "refinery_pages"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 4) AND ("refinery_pages"."rgt" >= 5) AND ("refinery_pages"."id" != 4)
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "refinery_pages" SET "depth" = 1 WHERE "refinery_pages"."id" IN (SELECT "refinery_pages"."id" FROM "refinery_pages" WHERE "refinery_pages"."id" = 4  ORDER BY "refinery_pages"."lft")[0m
+  [1m[35mRefinery::Page Load (0.0ms)[0m  SELECT  "refinery_pages".* FROM "refinery_pages" WHERE "refinery_pages"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mRefinery::PagePart Load (0.1ms)[0m  [1mSELECT "refinery_page_parts".* FROM "refinery_page_parts" WHERE "refinery_page_parts"."refinery_page_id" = ?  ORDER BY position ASC[0m  [["refinery_page_id", 4]]
+  [1m[35mRefinery::PagePart::Translation Load (0.2ms)[0m  SELECT "refinery_page_part_translations".* FROM "refinery_page_part_translations" WHERE "refinery_page_part_translations"."refinery_page_part_id" IN (6, 7)
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "refinery_page_parts" SET "position" = 0 WHERE "refinery_page_parts"."id" = ?[0m  [["id", 6]]
+  [1m[35mSQL (0.1ms)[0m  UPDATE "refinery_page_parts" SET "position" = 1 WHERE "refinery_page_parts"."id" = ?  [["id", 7]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mRefinery::Page::Translation Load (0.1ms)[0m  SELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" = ?  [["refinery_page_id", 4]]
+Redirected to http://localhost:3000/refinery/pages
+Completed 302 Found in 66ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/refinery/pages" for ::1 at 2015-05-04 12:18:25 -0700
+Processing by Refinery::Admin::PagesController#index as HTML
+  Parameters: {"locale"=>:en}
+  [1m[36mRefinery::Role Load (0.1ms)[0m  [1mSELECT  "refinery_roles".* FROM "refinery_roles" WHERE "refinery_roles"."title" = ?  ORDER BY "refinery_roles"."id" ASC LIMIT 1[0m  [["title", "Refinery"]]
+  [1m[35mRefinery::User Exists (0.1ms)[0m  SELECT  1 AS one FROM "refinery_users" INNER JOIN "refinery_roles_users" ON "refinery_users"."id" = "refinery_roles_users"."user_id" WHERE "refinery_roles_users"."role_id" = ? LIMIT 1  [["role_id", 1]]
+  [1m[36mRefinery::User Load (0.1ms)[0m  [1mSELECT  "refinery_users".* FROM "refinery_users" WHERE "refinery_users"."id" = ?  ORDER BY "refinery_users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRefinery::UserPlugin Load (0.1ms)[0m  SELECT "refinery_user_plugins".* FROM "refinery_user_plugins" WHERE "refinery_user_plugins"."user_id" = ?  ORDER BY position ASC  [["user_id", 1]]
+  [1m[36mRefinery::Role Load (0.1ms)[0m  [1mSELECT "refinery_roles".* FROM "refinery_roles" INNER JOIN "refinery_roles_users" ON "refinery_roles"."id" = "refinery_roles_users"."role_id" WHERE "refinery_roles_users"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/refinerycms-acts-as-indexed-2.0.1/app/views/refinery/acts_as_indexed/admin/_search_header.html.erb (0.1ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_search_header.html.erb (2.1ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "refinery_pages"
+  [1m[36mRefinery::Page Load (0.2ms)[0m  [1mSELECT "refinery_pages".* FROM "refinery_pages" WHERE "refinery_pages"."parent_id" IS NULL  ORDER BY lft ASC, "refinery_pages"."lft"[0m
+  [1m[35mRefinery::Page::Translation Load (0.2ms)[0m  SELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 3, 5, 6, 7, 8, 9)
+  [1m[36mRefinery::Page Load (0.6ms)[0m  [1mSELECT "refinery_pages".* FROM "refinery_pages" WHERE "refinery_pages"."parent_id" IN (1, 3, 5, 6, 7, 8, 9)  ORDER BY "lft"[0m
+  [1m[35mRefinery::Page::Translation Load (0.1ms)[0m  SELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" = ?  [["refinery_page_id", 2]]
+  [1m[36mRefinery::Page Load (0.2ms)[0m  [1mSELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 2) AND ("refinery_pages"."rgt" >= 3)  ORDER BY "refinery_pages"."lft"[0m
+  [1m[35mRefinery::Page::Translation Load (0.2ms)[0m  SELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 2) AND ("refinery_pages"."rgt" >= 3)  ORDER BY "refinery_pages"."lft"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 2)
+  [1m[36mRefinery::Page Load (0.1ms)[0m  [1mSELECT "refinery_pages".* FROM "refinery_pages" WHERE "refinery_pages"."parent_id" = ?  ORDER BY "lft"[0m  [["parent_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 2) AND ("refinery_pages"."rgt" >= 3)  ORDER BY "refinery_pages"."lft"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 2) AND ("refinery_pages"."rgt" >= 3)  ORDER BY "refinery_pages"."lft"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 2)[0m
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_page.html.erb (0.0ms)
+  [1m[35mRefinery::Page::Translation Load (0.1ms)[0m  SELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" = ?  [["refinery_page_id", 4]]
+  [1m[36mRefinery::Page Load (0.2ms)[0m  [1mSELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 4) AND ("refinery_pages"."rgt" >= 5)  ORDER BY "refinery_pages"."lft"[0m
+  [1m[35mRefinery::Page::Translation Load (0.2ms)[0m  SELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 4)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 4) AND ("refinery_pages"."rgt" >= 5)  ORDER BY "refinery_pages"."lft"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 4)
+  [1m[36mRefinery::Page Load (0.2ms)[0m  [1mSELECT "refinery_pages".* FROM "refinery_pages" WHERE "refinery_pages"."parent_id" = ?  ORDER BY "lft"[0m  [["parent_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 4) AND ("refinery_pages"."rgt" >= 5)  ORDER BY "refinery_pages"."lft"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 4)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 4) AND ("refinery_pages"."rgt" >= 5)  ORDER BY "refinery_pages"."lft"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 4)[0m
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_page.html.erb (0.0ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_page.html.erb (56.6ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_page.html.erb (0.0ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_page.html.erb (0.0ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_page.html.erb (0.0ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_page.html.erb (0.0ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_page.html.erb (0.0ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_page.html.erb (0.0ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_page.html.erb (179.6ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_sortable_list.html.erb (0.1ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_sortable_list.html.erb (201.8ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_records.html.erb (225.3ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/refinerycms-acts-as-indexed-2.0.1/app/views/refinery/acts_as_indexed/admin/_search.html.erb (0.4ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_search.html.erb (2.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "refinery_pages"
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_actions.html.erb (21.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "refinery_pages"[0m
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_make_sortable.html.erb (35.2ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/index.html.erb within layouts/refinery/admin (306.9ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_html_tag.html.erb (0.1ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_javascripts.html.erb (253.9ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_head.html.erb (329.2ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_site_bar.html.erb (5.3ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_menu.html.erb (18.3ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_no_script.html.erb (0.2ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_message.html.erb (0.2ms)
+Completed 200 OK in 746ms (Views: 737.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for ::1 at 2015-05-04 12:18:30 -0700
+Processing by Refinery::PagesController#home as HTML
+  Parameters: {"locale"=>:en}
+  [1m[35mRefinery::Page Load (0.1ms)[0m  SELECT  "refinery_pages".* FROM "refinery_pages" WHERE "refinery_pages"."link_url" = ?  ORDER BY "refinery_pages"."id" ASC LIMIT 1  [["link_url", "/"]]
+  [1m[36mRefinery::Page::Translation Load (0.1ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" = ?[0m  [["refinery_page_id", 1]]
+  [1m[35mRefinery::PagePart Load (0.1ms)[0m  SELECT "refinery_page_parts".* FROM "refinery_page_parts" WHERE "refinery_page_parts"."refinery_page_id" = ?  ORDER BY position ASC  [["refinery_page_id", 1]]
+  [1m[36mRefinery::PagePart::Translation Load (0.2ms)[0m  [1mSELECT "refinery_page_part_translations".* FROM "refinery_page_part_translations" WHERE "refinery_page_part_translations"."refinery_page_part_id" IN (1, 2)[0m
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_content_page.html.erb (4.4ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/pages/home.html.erb within layouts/application (13.3ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_html_tag.html.erb (0.0ms)
+  [1m[35mRefinery::User Load (0.2ms)[0m  SELECT  "refinery_users".* FROM "refinery_users" WHERE "refinery_users"."id" = ?  ORDER BY "refinery_users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRefinery::Role Load (0.1ms)[0m  [1mSELECT "refinery_roles".* FROM "refinery_roles" INNER JOIN "refinery_roles_users" ON "refinery_roles"."id" = "refinery_roles_users"."role_id" WHERE "refinery_roles_users"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_site_bar.html.erb (20.0ms)
+  [1m[35mSeoMetum Load (0.1ms)[0m  SELECT  "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = ? AND "seo_meta"."seo_meta_id" = ?  ORDER BY "seo_meta"."id" ASC LIMIT 1  [["seo_meta_type", "Refinery::Page::Translation"], ["seo_meta_id", 1]]
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_google_analytics.html.erb (0.1ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_head.html.erb (44.2ms)
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT "refinery_pages"."id" AS t0_r0, "refinery_pages"."parent_id" AS t0_r1, "refinery_pages"."path" AS t0_r2, "refinery_pages"."slug" AS t0_r3, "refinery_pages"."custom_slug" AS t0_r4, "refinery_pages"."show_in_menu" AS t0_r5, "refinery_pages"."link_url" AS t0_r6, "refinery_pages"."menu_match" AS t0_r7, "refinery_pages"."deletable" AS t0_r8, "refinery_pages"."draft" AS t0_r9, "refinery_pages"."skip_to_first_child" AS t0_r10, "refinery_pages"."lft" AS t0_r11, "refinery_pages"."rgt" AS t0_r12, "refinery_pages"."depth" AS t0_r13, "refinery_pages"."view_template" AS t0_r14, "refinery_pages"."layout_template" AS t0_r15, "refinery_pages"."created_at" AS t0_r16, "refinery_pages"."updated_at" AS t0_r17, "parents_refinery_pages"."id" AS t1_r0, "parents_refinery_pages"."parent_id" AS t1_r1, "parents_refinery_pages"."path" AS t1_r2, "parents_refinery_pages"."slug" AS t1_r3, "parents_refinery_pages"."custom_slug" AS t1_r4, "parents_refinery_pages"."show_in_menu" AS t1_r5, "parents_refinery_pages"."link_url" AS t1_r6, "parents_refinery_pages"."menu_match" AS t1_r7, "parents_refinery_pages"."deletable" AS t1_r8, "parents_refinery_pages"."draft" AS t1_r9, "parents_refinery_pages"."skip_to_first_child" AS t1_r10, "parents_refinery_pages"."lft" AS t1_r11, "parents_refinery_pages"."rgt" AS t1_r12, "parents_refinery_pages"."depth" AS t1_r13, "parents_refinery_pages"."view_template" AS t1_r14, "parents_refinery_pages"."layout_template" AS t1_r15, "parents_refinery_pages"."created_at" AS t1_r16, "parents_refinery_pages"."updated_at" AS t1_r17, "refinery_page_translations"."id" AS t2_r0, "refinery_page_translations"."refinery_page_id" AS t2_r1, "refinery_page_translations"."locale" AS t2_r2, "refinery_page_translations"."created_at" AS t2_r3, "refinery_page_translations"."updated_at" AS t2_r4, "refinery_page_translations"."title" AS t2_r5, "refinery_page_translations"."custom_slug" AS t2_r6, "refinery_page_translations"."menu_title" AS t2_r7, "refinery_page_translations"."slug" AS t2_r8 FROM "refinery_pages" INNER JOIN "refinery_page_translations" ON "refinery_page_translations"."refinery_page_id" = "refinery_pages"."id" LEFT OUTER JOIN "refinery_pages" "parents_refinery_pages" ON "parents_refinery_pages"."id" = "refinery_pages"."parent_id" WHERE "refinery_pages"."draft" = 'f' AND "refinery_pages"."show_in_menu" = 't' AND "refinery_page_translations"."locale" = 'en'  ORDER BY "refinery_pages"."lft"[0m
+  [1m[35mRefinery::Page Load (0.1ms)[0m  SELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 4) AND ("refinery_pages"."rgt" >= 5)  ORDER BY "refinery_pages"."lft"
+  [1m[36mRefinery::Page::Translation Load (0.1ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 4)[0m
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_header.html.erb (14.6ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_footer.html.erb (0.2ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_javascripts.html.erb (28.0ms)
+Completed 200 OK in 207ms (Views: 203.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2015-05-04 12:18:35 -0700
+Processing by Refinery::PagesController#home as HTML
+  Parameters: {"locale"=>:en}
+  [1m[35mRefinery::Page Load (0.1ms)[0m  SELECT  "refinery_pages".* FROM "refinery_pages" WHERE "refinery_pages"."link_url" = ?  ORDER BY "refinery_pages"."id" ASC LIMIT 1  [["link_url", "/"]]
+  [1m[36mRefinery::Page::Translation Load (0.2ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" = ?[0m  [["refinery_page_id", 1]]
+  [1m[35mRefinery::PagePart Load (0.1ms)[0m  SELECT "refinery_page_parts".* FROM "refinery_page_parts" WHERE "refinery_page_parts"."refinery_page_id" = ?  ORDER BY position ASC  [["refinery_page_id", 1]]
+  [1m[36mRefinery::PagePart::Translation Load (0.2ms)[0m  [1mSELECT "refinery_page_part_translations".* FROM "refinery_page_part_translations" WHERE "refinery_page_part_translations"."refinery_page_part_id" IN (1, 2)[0m
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_content_page.html.erb (5.2ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/pages/home.html.erb within layouts/application (25.5ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_html_tag.html.erb (0.1ms)
+  [1m[35mRefinery::User Load (0.1ms)[0m  SELECT  "refinery_users".* FROM "refinery_users" WHERE "refinery_users"."id" = ?  ORDER BY "refinery_users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRefinery::Role Load (0.1ms)[0m  [1mSELECT "refinery_roles".* FROM "refinery_roles" INNER JOIN "refinery_roles_users" ON "refinery_roles"."id" = "refinery_roles_users"."role_id" WHERE "refinery_roles_users"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_site_bar.html.erb (19.9ms)
+  [1m[35mSeoMetum Load (0.1ms)[0m  SELECT  "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = ? AND "seo_meta"."seo_meta_id" = ?  ORDER BY "seo_meta"."id" ASC LIMIT 1  [["seo_meta_type", "Refinery::Page::Translation"], ["seo_meta_id", 1]]
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_google_analytics.html.erb (0.1ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_head.html.erb (46.4ms)
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT "refinery_pages"."id" AS t0_r0, "refinery_pages"."parent_id" AS t0_r1, "refinery_pages"."path" AS t0_r2, "refinery_pages"."slug" AS t0_r3, "refinery_pages"."custom_slug" AS t0_r4, "refinery_pages"."show_in_menu" AS t0_r5, "refinery_pages"."link_url" AS t0_r6, "refinery_pages"."menu_match" AS t0_r7, "refinery_pages"."deletable" AS t0_r8, "refinery_pages"."draft" AS t0_r9, "refinery_pages"."skip_to_first_child" AS t0_r10, "refinery_pages"."lft" AS t0_r11, "refinery_pages"."rgt" AS t0_r12, "refinery_pages"."depth" AS t0_r13, "refinery_pages"."view_template" AS t0_r14, "refinery_pages"."layout_template" AS t0_r15, "refinery_pages"."created_at" AS t0_r16, "refinery_pages"."updated_at" AS t0_r17, "parents_refinery_pages"."id" AS t1_r0, "parents_refinery_pages"."parent_id" AS t1_r1, "parents_refinery_pages"."path" AS t1_r2, "parents_refinery_pages"."slug" AS t1_r3, "parents_refinery_pages"."custom_slug" AS t1_r4, "parents_refinery_pages"."show_in_menu" AS t1_r5, "parents_refinery_pages"."link_url" AS t1_r6, "parents_refinery_pages"."menu_match" AS t1_r7, "parents_refinery_pages"."deletable" AS t1_r8, "parents_refinery_pages"."draft" AS t1_r9, "parents_refinery_pages"."skip_to_first_child" AS t1_r10, "parents_refinery_pages"."lft" AS t1_r11, "parents_refinery_pages"."rgt" AS t1_r12, "parents_refinery_pages"."depth" AS t1_r13, "parents_refinery_pages"."view_template" AS t1_r14, "parents_refinery_pages"."layout_template" AS t1_r15, "parents_refinery_pages"."created_at" AS t1_r16, "parents_refinery_pages"."updated_at" AS t1_r17, "refinery_page_translations"."id" AS t2_r0, "refinery_page_translations"."refinery_page_id" AS t2_r1, "refinery_page_translations"."locale" AS t2_r2, "refinery_page_translations"."created_at" AS t2_r3, "refinery_page_translations"."updated_at" AS t2_r4, "refinery_page_translations"."title" AS t2_r5, "refinery_page_translations"."custom_slug" AS t2_r6, "refinery_page_translations"."menu_title" AS t2_r7, "refinery_page_translations"."slug" AS t2_r8 FROM "refinery_pages" INNER JOIN "refinery_page_translations" ON "refinery_page_translations"."refinery_page_id" = "refinery_pages"."id" LEFT OUTER JOIN "refinery_pages" "parents_refinery_pages" ON "parents_refinery_pages"."id" = "refinery_pages"."parent_id" WHERE "refinery_pages"."draft" = 'f' AND "refinery_pages"."show_in_menu" = 't' AND "refinery_page_translations"."locale" = 'en'  ORDER BY "refinery_pages"."lft"[0m
+  [1m[35mRefinery::Page Load (0.2ms)[0m  SELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 4) AND ("refinery_pages"."rgt" >= 5)  ORDER BY "refinery_pages"."lft"
+  [1m[36mRefinery::Page::Translation Load (0.3ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 4)[0m
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_header.html.erb (19.4ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_footer.html.erb (0.3ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_javascripts.html.erb (24.8ms)
+Completed 200 OK in 267ms (Views: 263.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2015-05-04 12:18:38 -0700
+Processing by Refinery::PagesController#home as HTML
+  Parameters: {"locale"=>:en}
+  [1m[35mRefinery::Page Load (0.1ms)[0m  SELECT  "refinery_pages".* FROM "refinery_pages" WHERE "refinery_pages"."link_url" = ?  ORDER BY "refinery_pages"."id" ASC LIMIT 1  [["link_url", "/"]]
+  [1m[36mRefinery::Page::Translation Load (0.1ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" = ?[0m  [["refinery_page_id", 1]]
+  [1m[35mRefinery::PagePart Load (0.1ms)[0m  SELECT "refinery_page_parts".* FROM "refinery_page_parts" WHERE "refinery_page_parts"."refinery_page_id" = ?  ORDER BY position ASC  [["refinery_page_id", 1]]
+  [1m[36mRefinery::PagePart::Translation Load (0.2ms)[0m  [1mSELECT "refinery_page_part_translations".* FROM "refinery_page_part_translations" WHERE "refinery_page_part_translations"."refinery_page_part_id" IN (1, 2)[0m
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_content_page.html.erb (5.3ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/pages/home.html.erb within layouts/application (17.1ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_html_tag.html.erb (0.1ms)
+  [1m[35mRefinery::User Load (0.1ms)[0m  SELECT  "refinery_users".* FROM "refinery_users" WHERE "refinery_users"."id" = ?  ORDER BY "refinery_users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRefinery::Role Load (0.1ms)[0m  [1mSELECT "refinery_roles".* FROM "refinery_roles" INNER JOIN "refinery_roles_users" ON "refinery_roles"."id" = "refinery_roles_users"."role_id" WHERE "refinery_roles_users"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_site_bar.html.erb (17.7ms)
+  [1m[35mSeoMetum Load (0.1ms)[0m  SELECT  "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = ? AND "seo_meta"."seo_meta_id" = ?  ORDER BY "seo_meta"."id" ASC LIMIT 1  [["seo_meta_type", "Refinery::Page::Translation"], ["seo_meta_id", 1]]
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_google_analytics.html.erb (0.1ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_head.html.erb (44.5ms)
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT "refinery_pages"."id" AS t0_r0, "refinery_pages"."parent_id" AS t0_r1, "refinery_pages"."path" AS t0_r2, "refinery_pages"."slug" AS t0_r3, "refinery_pages"."custom_slug" AS t0_r4, "refinery_pages"."show_in_menu" AS t0_r5, "refinery_pages"."link_url" AS t0_r6, "refinery_pages"."menu_match" AS t0_r7, "refinery_pages"."deletable" AS t0_r8, "refinery_pages"."draft" AS t0_r9, "refinery_pages"."skip_to_first_child" AS t0_r10, "refinery_pages"."lft" AS t0_r11, "refinery_pages"."rgt" AS t0_r12, "refinery_pages"."depth" AS t0_r13, "refinery_pages"."view_template" AS t0_r14, "refinery_pages"."layout_template" AS t0_r15, "refinery_pages"."created_at" AS t0_r16, "refinery_pages"."updated_at" AS t0_r17, "parents_refinery_pages"."id" AS t1_r0, "parents_refinery_pages"."parent_id" AS t1_r1, "parents_refinery_pages"."path" AS t1_r2, "parents_refinery_pages"."slug" AS t1_r3, "parents_refinery_pages"."custom_slug" AS t1_r4, "parents_refinery_pages"."show_in_menu" AS t1_r5, "parents_refinery_pages"."link_url" AS t1_r6, "parents_refinery_pages"."menu_match" AS t1_r7, "parents_refinery_pages"."deletable" AS t1_r8, "parents_refinery_pages"."draft" AS t1_r9, "parents_refinery_pages"."skip_to_first_child" AS t1_r10, "parents_refinery_pages"."lft" AS t1_r11, "parents_refinery_pages"."rgt" AS t1_r12, "parents_refinery_pages"."depth" AS t1_r13, "parents_refinery_pages"."view_template" AS t1_r14, "parents_refinery_pages"."layout_template" AS t1_r15, "parents_refinery_pages"."created_at" AS t1_r16, "parents_refinery_pages"."updated_at" AS t1_r17, "refinery_page_translations"."id" AS t2_r0, "refinery_page_translations"."refinery_page_id" AS t2_r1, "refinery_page_translations"."locale" AS t2_r2, "refinery_page_translations"."created_at" AS t2_r3, "refinery_page_translations"."updated_at" AS t2_r4, "refinery_page_translations"."title" AS t2_r5, "refinery_page_translations"."custom_slug" AS t2_r6, "refinery_page_translations"."menu_title" AS t2_r7, "refinery_page_translations"."slug" AS t2_r8 FROM "refinery_pages" INNER JOIN "refinery_page_translations" ON "refinery_page_translations"."refinery_page_id" = "refinery_pages"."id" LEFT OUTER JOIN "refinery_pages" "parents_refinery_pages" ON "parents_refinery_pages"."id" = "refinery_pages"."parent_id" WHERE "refinery_pages"."draft" = 'f' AND "refinery_pages"."show_in_menu" = 't' AND "refinery_page_translations"."locale" = 'en'  ORDER BY "refinery_pages"."lft"[0m
+  [1m[35mRefinery::Page Load (0.2ms)[0m  SELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 4) AND ("refinery_pages"."rgt" >= 5)  ORDER BY "refinery_pages"."lft"
+  [1m[36mRefinery::Page::Translation Load (0.2ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 4)[0m
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_header.html.erb (15.7ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_footer.html.erb (0.2ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_javascripts.html.erb (32.7ms)
+Completed 200 OK in 228ms (Views: 224.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/refinery/pages/about/edit" for ::1 at 2015-05-04 12:18:45 -0700
+Processing by Refinery::Admin::PagesController#edit as HTML
+  Parameters: {"path"=>"about", "locale"=>:en}
+  [1m[35mRefinery::Page Load (0.3ms)[0m  SELECT  "refinery_pages".* FROM "refinery_pages" INNER JOIN "refinery_page_translations" ON "refinery_page_translations"."refinery_page_id" = "refinery_pages"."id" WHERE "refinery_pages"."parent_id" IS NULL AND "refinery_page_translations"."locale" = 'en' AND "refinery_page_translations"."slug" = 'about'  ORDER BY "refinery_pages"."id" ASC LIMIT 1
+  [1m[36mRefinery::Role Load (0.1ms)[0m  [1mSELECT  "refinery_roles".* FROM "refinery_roles" WHERE "refinery_roles"."title" = ?  ORDER BY "refinery_roles"."id" ASC LIMIT 1[0m  [["title", "Refinery"]]
+  [1m[35mRefinery::User Exists (0.1ms)[0m  SELECT  1 AS one FROM "refinery_users" INNER JOIN "refinery_roles_users" ON "refinery_users"."id" = "refinery_roles_users"."user_id" WHERE "refinery_roles_users"."role_id" = ? LIMIT 1  [["role_id", 1]]
+  [1m[36mRefinery::User Load (0.1ms)[0m  [1mSELECT  "refinery_users".* FROM "refinery_users" WHERE "refinery_users"."id" = ?  ORDER BY "refinery_users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRefinery::UserPlugin Load (0.1ms)[0m  SELECT "refinery_user_plugins".* FROM "refinery_user_plugins" WHERE "refinery_user_plugins"."user_id" = ?  ORDER BY position ASC  [["user_id", 1]]
+  [1m[36mRefinery::Role Load (0.1ms)[0m  [1mSELECT "refinery_roles".* FROM "refinery_roles" INNER JOIN "refinery_roles_users" ON "refinery_roles"."id" = "refinery_roles_users"."role_id" WHERE "refinery_roles_users"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mRefinery::Page::Translation Load (0.1ms)[0m  SELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" = ?  [["refinery_page_id", 3]]
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_error_messages.html.erb (0.1ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_locale_picker.html.erb (0.1ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_form_fields_after_title.html.erb (0.0ms)
+  [1m[36mRefinery::PagePart Load (0.1ms)[0m  [1mSELECT "refinery_page_parts".* FROM "refinery_page_parts" WHERE "refinery_page_parts"."refinery_page_id" = ?  ORDER BY position ASC[0m  [["refinery_page_id", 3]]
+  [1m[35mRefinery::PagePart::Translation Load (0.2ms)[0m  SELECT "refinery_page_part_translations".* FROM "refinery_page_part_translations" WHERE "refinery_page_part_translations"."refinery_page_part_id" IN (4, 5)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_page_part_field.html.erb (0.8ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_page_part_field.html.erb (0.7ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_form_page_parts.html.erb (18.3ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_form_advanced_options_menu.html.erb (0.4ms)
+  [1m[36mRefinery::Page Load (0.4ms)[0m  [1mSELECT "refinery_pages".* FROM "refinery_pages" WHERE "refinery_pages"."parent_id" IS NULL  ORDER BY "refinery_pages"."lft"[0m
+  [1m[35mRefinery::Page Load (0.2ms)[0m  SELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" >= 1) AND ("refinery_pages"."lft" < 6)  ORDER BY "refinery_pages"."lft"
+  [1m[36mRefinery::Page Load (0.2ms)[0m  [1mSELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" >= 7) AND ("refinery_pages"."lft" < 8)  ORDER BY "refinery_pages"."lft"[0m
+  [1m[35mRefinery::Page Load (0.2ms)[0m  SELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" >= 9) AND ("refinery_pages"."lft" < 10)  ORDER BY "refinery_pages"."lft"
+  [1m[36mRefinery::Page Load (0.2ms)[0m  [1mSELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" >= 11) AND ("refinery_pages"."lft" < 12)  ORDER BY "refinery_pages"."lft"[0m
+  [1m[35mRefinery::Page Load (0.1ms)[0m  SELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" >= 13) AND ("refinery_pages"."lft" < 14)  ORDER BY "refinery_pages"."lft"
+  [1m[36mRefinery::Page Load (0.1ms)[0m  [1mSELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" >= 15) AND ("refinery_pages"."lft" < 16)  ORDER BY "refinery_pages"."lft"[0m
+  [1m[35mRefinery::Page Load (0.1ms)[0m  SELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" >= 17) AND ("refinery_pages"."lft" < 18)  ORDER BY "refinery_pages"."lft"
+  [1m[36mRefinery::Page::Translation Load (0.2ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 2, 4, 5, 6, 7, 8, 9)[0m
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_form_extra_fields_for_more_options.html.erb (0.0ms)
+  [1m[35mSeoMetum Load (0.1ms)[0m  SELECT  "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = ? AND "seo_meta"."seo_meta_id" = ?  ORDER BY "seo_meta"."id" ASC LIMIT 1  [["seo_meta_type", "Refinery::Page::Translation"], ["seo_meta_id", 3]]
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/seo_meta-2.0.0.rc.1/app/views/seo_meta/_form.html.erb (1.5ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_form_advanced_options_seo.html.erb (5.8ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_form_advanced_options.html.erb (51.5ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_continue_editing.html.erb (0.2ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_form_actions.html.erb (16.9ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_form.html.erb (155.4ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/edit.html.erb within layouts/refinery/admin (161.6ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_html_tag.html.erb (0.1ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_javascripts.html.erb (243.2ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_head.html.erb (313.0ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_site_bar.html.erb (5.0ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_menu.html.erb (19.4ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_no_script.html.erb (0.2ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_message.html.erb (0.1ms)
+Completed 200 OK in 588ms (Views: 579.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/about" for ::1 at 2015-05-04 12:18:50 -0700
+Processing by Refinery::PagesController#show as HTML
+  Parameters: {"path"=>"about", "locale"=>:en}
+  [1m[36mRefinery::Page Load (0.3ms)[0m  [1mSELECT  "refinery_pages".* FROM "refinery_pages" INNER JOIN "refinery_page_translations" ON "refinery_page_translations"."refinery_page_id" = "refinery_pages"."id" WHERE "refinery_pages"."parent_id" IS NULL AND "refinery_page_translations"."locale" = 'en' AND "refinery_page_translations"."slug" = 'about'  ORDER BY "refinery_pages"."id" ASC LIMIT 1[0m
+  [1m[35mRefinery::Page::Translation Load (0.1ms)[0m  SELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" = ?  [["refinery_page_id", 3]]
+  [1m[36mRefinery::Page Load (0.2ms)[0m  [1mSELECT  "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 7) AND ("refinery_pages"."rgt" >= 8) AND "refinery_pages"."parent_id" IS NULL  ORDER BY "refinery_pages"."lft" LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" = ?  [["refinery_page_id", 3]]
+  [1m[36mRefinery::PagePart Load (0.1ms)[0m  [1mSELECT "refinery_page_parts".* FROM "refinery_page_parts" WHERE "refinery_page_parts"."refinery_page_id" = ?  ORDER BY position ASC[0m  [["refinery_page_id", 3]]
+  [1m[35mRefinery::PagePart::Translation Load (0.2ms)[0m  SELECT "refinery_page_part_translations".* FROM "refinery_page_part_translations" WHERE "refinery_page_part_translations"."refinery_page_part_id" IN (4, 5)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_content_page.html.erb (4.2ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/pages/show.html.erb within layouts/application (21.8ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_html_tag.html.erb (0.1ms)
+  [1m[36mRefinery::User Load (0.2ms)[0m  [1mSELECT  "refinery_users".* FROM "refinery_users" WHERE "refinery_users"."id" = ?  ORDER BY "refinery_users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRefinery::Role Load (0.1ms)[0m  SELECT "refinery_roles".* FROM "refinery_roles" INNER JOIN "refinery_roles_users" ON "refinery_roles"."id" = "refinery_roles_users"."role_id" WHERE "refinery_roles_users"."user_id" = ?  [["user_id", 1]]
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_site_bar.html.erb (16.3ms)
+  [1m[36mSeoMetum Load (0.2ms)[0m  [1mSELECT  "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = ? AND "seo_meta"."seo_meta_id" = ?  ORDER BY "seo_meta"."id" ASC LIMIT 1[0m  [["seo_meta_type", "Refinery::Page::Translation"], ["seo_meta_id", 3]]
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_google_analytics.html.erb (0.1ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_head.html.erb (43.1ms)
+  [1m[35mSQL (0.5ms)[0m  SELECT "refinery_pages"."id" AS t0_r0, "refinery_pages"."parent_id" AS t0_r1, "refinery_pages"."path" AS t0_r2, "refinery_pages"."slug" AS t0_r3, "refinery_pages"."custom_slug" AS t0_r4, "refinery_pages"."show_in_menu" AS t0_r5, "refinery_pages"."link_url" AS t0_r6, "refinery_pages"."menu_match" AS t0_r7, "refinery_pages"."deletable" AS t0_r8, "refinery_pages"."draft" AS t0_r9, "refinery_pages"."skip_to_first_child" AS t0_r10, "refinery_pages"."lft" AS t0_r11, "refinery_pages"."rgt" AS t0_r12, "refinery_pages"."depth" AS t0_r13, "refinery_pages"."view_template" AS t0_r14, "refinery_pages"."layout_template" AS t0_r15, "refinery_pages"."created_at" AS t0_r16, "refinery_pages"."updated_at" AS t0_r17, "parents_refinery_pages"."id" AS t1_r0, "parents_refinery_pages"."parent_id" AS t1_r1, "parents_refinery_pages"."path" AS t1_r2, "parents_refinery_pages"."slug" AS t1_r3, "parents_refinery_pages"."custom_slug" AS t1_r4, "parents_refinery_pages"."show_in_menu" AS t1_r5, "parents_refinery_pages"."link_url" AS t1_r6, "parents_refinery_pages"."menu_match" AS t1_r7, "parents_refinery_pages"."deletable" AS t1_r8, "parents_refinery_pages"."draft" AS t1_r9, "parents_refinery_pages"."skip_to_first_child" AS t1_r10, "parents_refinery_pages"."lft" AS t1_r11, "parents_refinery_pages"."rgt" AS t1_r12, "parents_refinery_pages"."depth" AS t1_r13, "parents_refinery_pages"."view_template" AS t1_r14, "parents_refinery_pages"."layout_template" AS t1_r15, "parents_refinery_pages"."created_at" AS t1_r16, "parents_refinery_pages"."updated_at" AS t1_r17, "refinery_page_translations"."id" AS t2_r0, "refinery_page_translations"."refinery_page_id" AS t2_r1, "refinery_page_translations"."locale" AS t2_r2, "refinery_page_translations"."created_at" AS t2_r3, "refinery_page_translations"."updated_at" AS t2_r4, "refinery_page_translations"."title" AS t2_r5, "refinery_page_translations"."custom_slug" AS t2_r6, "refinery_page_translations"."menu_title" AS t2_r7, "refinery_page_translations"."slug" AS t2_r8 FROM "refinery_pages" INNER JOIN "refinery_page_translations" ON "refinery_page_translations"."refinery_page_id" = "refinery_pages"."id" LEFT OUTER JOIN "refinery_pages" "parents_refinery_pages" ON "parents_refinery_pages"."id" = "refinery_pages"."parent_id" WHERE "refinery_pages"."draft" = 'f' AND "refinery_pages"."show_in_menu" = 't' AND "refinery_page_translations"."locale" = 'en'  ORDER BY "refinery_pages"."lft"
+  [1m[36mRefinery::Page Load (0.2ms)[0m  [1mSELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 4) AND ("refinery_pages"."rgt" >= 5)  ORDER BY "refinery_pages"."lft"[0m
+  [1m[35mRefinery::Page::Translation Load (0.2ms)[0m  SELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 4)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_header.html.erb (19.6ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_footer.html.erb (0.2ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_javascripts.html.erb (31.6ms)
+Completed 200 OK in 270ms (Views: 263.4ms | ActiveRecord: 2.2ms)
+
+
+Started PATCH "/refinery/pages/about" for ::1 at 2015-05-04 12:18:59 -0700
+Processing by Refinery::Admin::PagesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2fa4PkKXXrAhh15YttOfxISeYpDDWO8dj6OgMC4d4GNlAvTTkKMvywxhdQekpZ/0EpHc52p50M9RD3qUuZkEaA==", "switch_locale"=>"en", "page"=>{"title"=>"About", "parts_attributes"=>{"0"=>{"body"=>"<div class=\"row\">\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-md-8\">.col-md-8</div>\r\n  <div class=\"col-md-4\">.col-md-4</div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-md-4\">.col-md-4</div>\r\n  <div class=\"col-md-4\">.col-md-4</div>\r\n  <div class=\"col-md-4\">.col-md-4</div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-md-6\">.col-md-6</div>\r\n  <div class=\"col-md-6\">.col-md-6</div>\r\n</div>", "position"=>"0", "id"=>"4"}, "1"=>{"body"=>"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla nisi a elit. Duis ultricies orci ut arcu. Ut ac nibh. Duis blandit rhoncus magna. Pellentesque semper risus ut magna. Etiam pulvinar tellus eget diam. Morbi blandit. Donec pulvinar mauris at ligula. Sed pellentesque, ipsum id congue molestie, lectus risus egestas pede, ac viverra diam lacus ac urna. Aenean elit.</p>", "position"=>"1", "id"=>"5"}}, "draft"=>"0", "parent_id"=>"", "view_template"=>"show", "menu_title"=>"", "skip_to_first_child"=>"0", "link_url"=>"", "show_in_menu"=>"1", "browser_title"=>"", "meta_description"=>""}, "continue_editing"=>"false", "path"=>"about", "locale"=>:en}
+  [1m[36mRefinery::Page Load (0.4ms)[0m  [1mSELECT  "refinery_pages".* FROM "refinery_pages" INNER JOIN "refinery_page_translations" ON "refinery_page_translations"."refinery_page_id" = "refinery_pages"."id" WHERE "refinery_pages"."parent_id" IS NULL AND "refinery_page_translations"."locale" = 'en' AND "refinery_page_translations"."slug" = 'about'  ORDER BY "refinery_pages"."id" ASC LIMIT 1[0m
+  [1m[35mRefinery::Role Load (0.1ms)[0m  SELECT  "refinery_roles".* FROM "refinery_roles" WHERE "refinery_roles"."title" = ?  ORDER BY "refinery_roles"."id" ASC LIMIT 1  [["title", "Refinery"]]
+  [1m[36mRefinery::User Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "refinery_users" INNER JOIN "refinery_roles_users" ON "refinery_users"."id" = "refinery_roles_users"."user_id" WHERE "refinery_roles_users"."role_id" = ? LIMIT 1[0m  [["role_id", 1]]
+  [1m[35mRefinery::User Load (0.1ms)[0m  SELECT  "refinery_users".* FROM "refinery_users" WHERE "refinery_users"."id" = ?  ORDER BY "refinery_users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRefinery::UserPlugin Load (0.1ms)[0m  [1mSELECT "refinery_user_plugins".* FROM "refinery_user_plugins" WHERE "refinery_user_plugins"."user_id" = ?  ORDER BY position ASC[0m  [["user_id", 1]]
+  [1m[35mRefinery::Role Load (0.1ms)[0m  SELECT "refinery_roles".* FROM "refinery_roles" INNER JOIN "refinery_roles_users" ON "refinery_roles"."id" = "refinery_roles_users"."role_id" WHERE "refinery_roles_users"."user_id" = ?  [["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mRefinery::Page::Translation Load (0.1ms)[0m  SELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" = ?  [["refinery_page_id", 3]]
+  [1m[36mSeoMetum Load (0.0ms)[0m  [1mSELECT  "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = ? AND "seo_meta"."seo_meta_id" = ?  ORDER BY "seo_meta"."id" ASC LIMIT 1[0m  [["seo_meta_type", "Refinery::Page::Translation"], ["seo_meta_id", 3]]
+  [1m[35mRefinery::PagePart Load (0.2ms)[0m  SELECT "refinery_page_parts".* FROM "refinery_page_parts" WHERE "refinery_page_parts"."refinery_page_id" = ? AND "refinery_page_parts"."id" IN (4, 5)  ORDER BY position ASC  [["refinery_page_id", 3]]
+  [1m[36mRefinery::PagePart::Translation Load (0.1ms)[0m  [1mSELECT "refinery_page_part_translations".* FROM "refinery_page_part_translations" WHERE "refinery_page_part_translations"."refinery_page_part_id" IN (4, 5)[0m
+  [1m[35mRefinery::PagePart Exists (0.1ms)[0m  SELECT  1 AS one FROM "refinery_page_parts" WHERE ("refinery_page_parts"."title" = 'Body' AND "refinery_page_parts"."id" != 4 AND "refinery_page_parts"."refinery_page_id" = 3) LIMIT 1
+  [1m[36mRefinery::Page Load (0.0ms)[0m  [1mSELECT  "refinery_pages".* FROM "refinery_pages" WHERE "refinery_pages"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" = ?  [["refinery_page_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = ? AND "seo_meta"."seo_meta_id" = ?  ORDER BY "seo_meta"."id" ASC LIMIT 1[0m  [["seo_meta_type", "Refinery::Page::Translation"], ["seo_meta_id", 3]]
+  [1m[35mRefinery::PagePart Load (0.0ms)[0m  SELECT "refinery_page_parts".* FROM "refinery_page_parts" WHERE "refinery_page_parts"."refinery_page_id" = ?  ORDER BY position ASC  [["refinery_page_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "refinery_page_part_translations".* FROM "refinery_page_part_translations" WHERE "refinery_page_part_translations"."refinery_page_part_id" IN (4, 5)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "refinery_page_parts".* FROM "refinery_page_parts" WHERE "refinery_page_parts"."refinery_page_id" = ?  ORDER BY position ASC  [["refinery_page_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "refinery_page_part_translations".* FROM "refinery_page_part_translations" WHERE "refinery_page_part_translations"."refinery_page_part_id" IN (4, 5)[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "refinery_pages" SET "link_url" = ?, "view_template" = ?, "updated_at" = ? WHERE "refinery_pages"."id" = ?  [["link_url", ""], ["view_template", "show"], ["updated_at", "2015-05-04 19:18:59.247377"], ["id", 3]]
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "refinery_page_translations" SET "menu_title" = ?, "updated_at" = ? WHERE "refinery_page_translations"."id" = ?[0m  [["menu_title", ""], ["updated_at", "2015-05-04 19:18:59.374715"], ["id", 3]]
+  [1m[35mSQL (0.1ms)[0m  UPDATE "seo_meta" SET "browser_title" = ?, "meta_description" = ?, "updated_at" = ? WHERE "seo_meta"."id" = ?  [["browser_title", ""], ["meta_description", ""], ["updated_at", "2015-05-04 19:18:59.375730"], ["id", 3]]
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "refinery_page_parts" SET "updated_at" = ? WHERE "refinery_page_parts"."id" = ?[0m  [["updated_at", "2015-05-04 19:18:59.377102"], ["id", 4]]
+  [1m[35mSQL (0.1ms)[0m  UPDATE "refinery_page_part_translations" SET "body" = ?, "updated_at" = ? WHERE "refinery_page_part_translations"."id" = ?  [["body", "<div class=\"row\">\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n  <div class=\"col-md-1\">.col-md-1</div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-md-8\">.col-md-8</div>\r\n  <div class=\"col-md-4\">.col-md-4</div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-md-4\">.col-md-4</div>\r\n  <div class=\"col-md-4\">.col-md-4</div>\r\n  <div class=\"col-md-4\">.col-md-4</div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-md-6\">.col-md-6</div>\r\n  <div class=\"col-md-6\">.col-md-6</div>\r\n</div>"], ["updated_at", "2015-05-04 19:18:59.378646"], ["id", 4]]
+  [1m[36mRefinery::Page Load (0.1ms)[0m  [1mSELECT  "refinery_pages".* FROM "refinery_pages" WHERE "refinery_pages"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "refinery_pages" SET "depth" = 0 WHERE "refinery_pages"."id" IN (SELECT "refinery_pages"."id" FROM "refinery_pages" WHERE "refinery_pages"."id" = 3  ORDER BY "refinery_pages"."lft")
+  [1m[36mRefinery::Page Load (0.0ms)[0m  [1mSELECT  "refinery_pages".* FROM "refinery_pages" WHERE "refinery_pages"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mRefinery::PagePart Load (0.1ms)[0m  SELECT "refinery_page_parts".* FROM "refinery_page_parts" WHERE "refinery_page_parts"."refinery_page_id" = ?  ORDER BY position ASC  [["refinery_page_id", 3]]
+  [1m[36mRefinery::PagePart::Translation Load (0.2ms)[0m  [1mSELECT "refinery_page_part_translations".* FROM "refinery_page_part_translations" WHERE "refinery_page_part_translations"."refinery_page_part_id" IN (4, 5)[0m
+  [1m[35mSQL (0.0ms)[0m  UPDATE "refinery_page_parts" SET "position" = 0 WHERE "refinery_page_parts"."id" = ?  [["id", 4]]
+  [1m[36mSQL (0.0ms)[0m  [1mUPDATE "refinery_page_parts" SET "position" = 1 WHERE "refinery_page_parts"."id" = ?[0m  [["id", 5]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36mRefinery::Page::Translation Load (0.1ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" = ?[0m  [["refinery_page_id", 3]]
+Redirected to http://localhost:3000/refinery/pages
+Completed 302 Found in 159ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/refinery/pages" for ::1 at 2015-05-04 12:18:59 -0700
+Processing by Refinery::Admin::PagesController#index as HTML
+  Parameters: {"locale"=>:en}
+  [1m[35mRefinery::Role Load (0.1ms)[0m  SELECT  "refinery_roles".* FROM "refinery_roles" WHERE "refinery_roles"."title" = ?  ORDER BY "refinery_roles"."id" ASC LIMIT 1  [["title", "Refinery"]]
+  [1m[36mRefinery::User Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "refinery_users" INNER JOIN "refinery_roles_users" ON "refinery_users"."id" = "refinery_roles_users"."user_id" WHERE "refinery_roles_users"."role_id" = ? LIMIT 1[0m  [["role_id", 1]]
+  [1m[35mRefinery::User Load (0.1ms)[0m  SELECT  "refinery_users".* FROM "refinery_users" WHERE "refinery_users"."id" = ?  ORDER BY "refinery_users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRefinery::UserPlugin Load (0.1ms)[0m  [1mSELECT "refinery_user_plugins".* FROM "refinery_user_plugins" WHERE "refinery_user_plugins"."user_id" = ?  ORDER BY position ASC[0m  [["user_id", 1]]
+  [1m[35mRefinery::Role Load (0.1ms)[0m  SELECT "refinery_roles".* FROM "refinery_roles" INNER JOIN "refinery_roles_users" ON "refinery_roles"."id" = "refinery_roles_users"."role_id" WHERE "refinery_roles_users"."user_id" = ?  [["user_id", 1]]
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/refinerycms-acts-as-indexed-2.0.1/app/views/refinery/acts_as_indexed/admin/_search_header.html.erb (0.1ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_search_header.html.erb (2.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "refinery_pages"[0m
+  [1m[35mRefinery::Page Load (0.3ms)[0m  SELECT "refinery_pages".* FROM "refinery_pages" WHERE "refinery_pages"."parent_id" IS NULL  ORDER BY lft ASC, "refinery_pages"."lft"
+  [1m[36mRefinery::Page::Translation Load (0.3ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 3, 5, 6, 7, 8, 9)[0m
+  [1m[35mRefinery::Page Load (0.3ms)[0m  SELECT "refinery_pages".* FROM "refinery_pages" WHERE "refinery_pages"."parent_id" IN (1, 3, 5, 6, 7, 8, 9)  ORDER BY "lft"
+  [1m[36mRefinery::Page::Translation Load (0.1ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" = ?[0m  [["refinery_page_id", 2]]
+  [1m[35mRefinery::Page Load (0.3ms)[0m  SELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 2) AND ("refinery_pages"."rgt" >= 3)  ORDER BY "refinery_pages"."lft"
+  [1m[36mRefinery::Page::Translation Load (0.2ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 2) AND ("refinery_pages"."rgt" >= 3)  ORDER BY "refinery_pages"."lft"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 2)[0m
+  [1m[35mRefinery::Page Load (0.1ms)[0m  SELECT "refinery_pages".* FROM "refinery_pages" WHERE "refinery_pages"."parent_id" = ?  ORDER BY "lft"  [["parent_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 2) AND ("refinery_pages"."rgt" >= 3)  ORDER BY "refinery_pages"."lft"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 2) AND ("refinery_pages"."rgt" >= 3)  ORDER BY "refinery_pages"."lft"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 2)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_page.html.erb (0.0ms)
+  [1m[36mRefinery::Page::Translation Load (0.1ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" = ?[0m  [["refinery_page_id", 4]]
+  [1m[35mRefinery::Page Load (0.2ms)[0m  SELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 4) AND ("refinery_pages"."rgt" >= 5)  ORDER BY "refinery_pages"."lft"
+  [1m[36mRefinery::Page::Translation Load (0.3ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 4)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 4) AND ("refinery_pages"."rgt" >= 5)  ORDER BY "refinery_pages"."lft"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 4)[0m
+  [1m[35mRefinery::Page Load (0.1ms)[0m  SELECT "refinery_pages".* FROM "refinery_pages" WHERE "refinery_pages"."parent_id" = ?  ORDER BY "lft"  [["parent_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 4) AND ("refinery_pages"."rgt" >= 5)  ORDER BY "refinery_pages"."lft"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 4)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 4) AND ("refinery_pages"."rgt" >= 5)  ORDER BY "refinery_pages"."lft"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 4)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_page.html.erb (0.0ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_page.html.erb (61.6ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_page.html.erb (0.0ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_page.html.erb (0.0ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_page.html.erb (0.0ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_page.html.erb (0.0ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_page.html.erb (0.0ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_page.html.erb (0.0ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_page.html.erb (182.9ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_sortable_list.html.erb (0.1ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_sortable_list.html.erb (207.2ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_records.html.erb (231.1ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/refinerycms-acts-as-indexed-2.0.1/app/views/refinery/acts_as_indexed/admin/_search.html.erb (0.3ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_search.html.erb (2.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "refinery_pages"[0m
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/_actions.html.erb (21.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "refinery_pages"
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_make_sortable.html.erb (38.1ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/admin/pages/index.html.erb within layouts/refinery/admin (313.8ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_html_tag.html.erb (0.1ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_javascripts.html.erb (263.3ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_head.html.erb (332.3ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_site_bar.html.erb (6.3ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/admin/_menu.html.erb (18.2ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_no_script.html.erb (0.3ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_message.html.erb (0.3ms)
+Completed 200 OK in 764ms (Views: 755.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/about" for ::1 at 2015-05-04 12:19:03 -0700
+Processing by Refinery::PagesController#show as HTML
+  Parameters: {"path"=>"about", "locale"=>:en}
+  [1m[36mRefinery::Page Load (0.3ms)[0m  [1mSELECT  "refinery_pages".* FROM "refinery_pages" INNER JOIN "refinery_page_translations" ON "refinery_page_translations"."refinery_page_id" = "refinery_pages"."id" WHERE "refinery_pages"."parent_id" IS NULL AND "refinery_page_translations"."locale" = 'en' AND "refinery_page_translations"."slug" = 'about'  ORDER BY "refinery_pages"."id" ASC LIMIT 1[0m
+  [1m[35mRefinery::Page::Translation Load (0.1ms)[0m  SELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" = ?  [["refinery_page_id", 3]]
+  [1m[36mRefinery::Page Load (0.2ms)[0m  [1mSELECT  "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 7) AND ("refinery_pages"."rgt" >= 8) AND "refinery_pages"."parent_id" IS NULL  ORDER BY "refinery_pages"."lft" LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" = ?  [["refinery_page_id", 3]]
+  [1m[36mRefinery::PagePart Load (0.1ms)[0m  [1mSELECT "refinery_page_parts".* FROM "refinery_page_parts" WHERE "refinery_page_parts"."refinery_page_id" = ?  ORDER BY position ASC[0m  [["refinery_page_id", 3]]
+  [1m[35mRefinery::PagePart::Translation Load (0.2ms)[0m  SELECT "refinery_page_part_translations".* FROM "refinery_page_part_translations" WHERE "refinery_page_part_translations"."refinery_page_part_id" IN (4, 5)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_content_page.html.erb (3.7ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/pages/show.html.erb within layouts/application (13.0ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_html_tag.html.erb (0.1ms)
+  [1m[36mRefinery::User Load (0.1ms)[0m  [1mSELECT  "refinery_users".* FROM "refinery_users" WHERE "refinery_users"."id" = ?  ORDER BY "refinery_users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRefinery::Role Load (0.1ms)[0m  SELECT "refinery_roles".* FROM "refinery_roles" INNER JOIN "refinery_roles_users" ON "refinery_roles"."id" = "refinery_roles_users"."role_id" WHERE "refinery_roles_users"."user_id" = ?  [["user_id", 1]]
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_site_bar.html.erb (22.9ms)
+  [1m[36mSeoMetum Load (0.1ms)[0m  [1mSELECT  "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = ? AND "seo_meta"."seo_meta_id" = ?  ORDER BY "seo_meta"."id" ASC LIMIT 1[0m  [["seo_meta_type", "Refinery::Page::Translation"], ["seo_meta_id", 3]]
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_google_analytics.html.erb (0.1ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_head.html.erb (46.4ms)
+  [1m[35mSQL (0.4ms)[0m  SELECT "refinery_pages"."id" AS t0_r0, "refinery_pages"."parent_id" AS t0_r1, "refinery_pages"."path" AS t0_r2, "refinery_pages"."slug" AS t0_r3, "refinery_pages"."custom_slug" AS t0_r4, "refinery_pages"."show_in_menu" AS t0_r5, "refinery_pages"."link_url" AS t0_r6, "refinery_pages"."menu_match" AS t0_r7, "refinery_pages"."deletable" AS t0_r8, "refinery_pages"."draft" AS t0_r9, "refinery_pages"."skip_to_first_child" AS t0_r10, "refinery_pages"."lft" AS t0_r11, "refinery_pages"."rgt" AS t0_r12, "refinery_pages"."depth" AS t0_r13, "refinery_pages"."view_template" AS t0_r14, "refinery_pages"."layout_template" AS t0_r15, "refinery_pages"."created_at" AS t0_r16, "refinery_pages"."updated_at" AS t0_r17, "parents_refinery_pages"."id" AS t1_r0, "parents_refinery_pages"."parent_id" AS t1_r1, "parents_refinery_pages"."path" AS t1_r2, "parents_refinery_pages"."slug" AS t1_r3, "parents_refinery_pages"."custom_slug" AS t1_r4, "parents_refinery_pages"."show_in_menu" AS t1_r5, "parents_refinery_pages"."link_url" AS t1_r6, "parents_refinery_pages"."menu_match" AS t1_r7, "parents_refinery_pages"."deletable" AS t1_r8, "parents_refinery_pages"."draft" AS t1_r9, "parents_refinery_pages"."skip_to_first_child" AS t1_r10, "parents_refinery_pages"."lft" AS t1_r11, "parents_refinery_pages"."rgt" AS t1_r12, "parents_refinery_pages"."depth" AS t1_r13, "parents_refinery_pages"."view_template" AS t1_r14, "parents_refinery_pages"."layout_template" AS t1_r15, "parents_refinery_pages"."created_at" AS t1_r16, "parents_refinery_pages"."updated_at" AS t1_r17, "refinery_page_translations"."id" AS t2_r0, "refinery_page_translations"."refinery_page_id" AS t2_r1, "refinery_page_translations"."locale" AS t2_r2, "refinery_page_translations"."created_at" AS t2_r3, "refinery_page_translations"."updated_at" AS t2_r4, "refinery_page_translations"."title" AS t2_r5, "refinery_page_translations"."custom_slug" AS t2_r6, "refinery_page_translations"."menu_title" AS t2_r7, "refinery_page_translations"."slug" AS t2_r8 FROM "refinery_pages" INNER JOIN "refinery_page_translations" ON "refinery_page_translations"."refinery_page_id" = "refinery_pages"."id" LEFT OUTER JOIN "refinery_pages" "parents_refinery_pages" ON "parents_refinery_pages"."id" = "refinery_pages"."parent_id" WHERE "refinery_pages"."draft" = 'f' AND "refinery_pages"."show_in_menu" = 't' AND "refinery_page_translations"."locale" = 'en'  ORDER BY "refinery_pages"."lft"
+  [1m[36mRefinery::Page Load (0.1ms)[0m  [1mSELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 4) AND ("refinery_pages"."rgt" >= 5)  ORDER BY "refinery_pages"."lft"[0m
+  [1m[35mRefinery::Page::Translation Load (0.2ms)[0m  SELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 4)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_header.html.erb (16.0ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_footer.html.erb (0.2ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_javascripts.html.erb (24.1ms)
+Completed 200 OK in 223ms (Views: 216.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/about" for ::1 at 2015-05-04 12:19:21 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Refinery::PagesController#show as HTML
+  Parameters: {"path"=>"about", "locale"=>:en}
+  [1m[35mRefinery::Page Load (0.4ms)[0m  SELECT  "refinery_pages".* FROM "refinery_pages" INNER JOIN "refinery_page_translations" ON "refinery_page_translations"."refinery_page_id" = "refinery_pages"."id" WHERE "refinery_pages"."parent_id" IS NULL AND "refinery_page_translations"."locale" = 'en' AND "refinery_page_translations"."slug" = 'about'  ORDER BY "refinery_pages"."id" ASC LIMIT 1
+  [1m[36mRefinery::Page::Translation Load (0.2ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" = ?[0m  [["refinery_page_id", 3]]
+  [1m[35mRefinery::Page Load (0.3ms)[0m  SELECT  "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 7) AND ("refinery_pages"."rgt" >= 8) AND "refinery_pages"."parent_id" IS NULL  ORDER BY "refinery_pages"."lft" LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" = ?[0m  [["refinery_page_id", 3]]
+  [1m[35mRefinery::PagePart Load (0.1ms)[0m  SELECT "refinery_page_parts".* FROM "refinery_page_parts" WHERE "refinery_page_parts"."refinery_page_id" = ?  ORDER BY position ASC  [["refinery_page_id", 3]]
+  [1m[36mRefinery::PagePart::Translation Load (0.2ms)[0m  [1mSELECT "refinery_page_part_translations".* FROM "refinery_page_part_translations" WHERE "refinery_page_part_translations"."refinery_page_part_id" IN (4, 5)[0m
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_content_page.html.erb (26.0ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/pages/show.html.erb within layouts/application (40.1ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_html_tag.html.erb (0.3ms)
+  [1m[35mRefinery::User Load (0.1ms)[0m  SELECT  "refinery_users".* FROM "refinery_users" WHERE "refinery_users"."id" = ?  ORDER BY "refinery_users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRefinery::Role Load (0.1ms)[0m  [1mSELECT "refinery_roles".* FROM "refinery_roles" INNER JOIN "refinery_roles_users" ON "refinery_roles"."id" = "refinery_roles_users"."role_id" WHERE "refinery_roles_users"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_site_bar.html.erb (135.9ms)
+  [1m[35mSeoMetum Load (0.1ms)[0m  SELECT  "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = ? AND "seo_meta"."seo_meta_id" = ?  ORDER BY "seo_meta"."id" ASC LIMIT 1  [["seo_meta_type", "Refinery::Page::Translation"], ["seo_meta_id", 3]]
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_google_analytics.html.erb (0.4ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_head.html.erb (44.9ms)
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT "refinery_pages"."id" AS t0_r0, "refinery_pages"."parent_id" AS t0_r1, "refinery_pages"."path" AS t0_r2, "refinery_pages"."slug" AS t0_r3, "refinery_pages"."custom_slug" AS t0_r4, "refinery_pages"."show_in_menu" AS t0_r5, "refinery_pages"."link_url" AS t0_r6, "refinery_pages"."menu_match" AS t0_r7, "refinery_pages"."deletable" AS t0_r8, "refinery_pages"."draft" AS t0_r9, "refinery_pages"."skip_to_first_child" AS t0_r10, "refinery_pages"."lft" AS t0_r11, "refinery_pages"."rgt" AS t0_r12, "refinery_pages"."depth" AS t0_r13, "refinery_pages"."view_template" AS t0_r14, "refinery_pages"."layout_template" AS t0_r15, "refinery_pages"."created_at" AS t0_r16, "refinery_pages"."updated_at" AS t0_r17, "parents_refinery_pages"."id" AS t1_r0, "parents_refinery_pages"."parent_id" AS t1_r1, "parents_refinery_pages"."path" AS t1_r2, "parents_refinery_pages"."slug" AS t1_r3, "parents_refinery_pages"."custom_slug" AS t1_r4, "parents_refinery_pages"."show_in_menu" AS t1_r5, "parents_refinery_pages"."link_url" AS t1_r6, "parents_refinery_pages"."menu_match" AS t1_r7, "parents_refinery_pages"."deletable" AS t1_r8, "parents_refinery_pages"."draft" AS t1_r9, "parents_refinery_pages"."skip_to_first_child" AS t1_r10, "parents_refinery_pages"."lft" AS t1_r11, "parents_refinery_pages"."rgt" AS t1_r12, "parents_refinery_pages"."depth" AS t1_r13, "parents_refinery_pages"."view_template" AS t1_r14, "parents_refinery_pages"."layout_template" AS t1_r15, "parents_refinery_pages"."created_at" AS t1_r16, "parents_refinery_pages"."updated_at" AS t1_r17, "refinery_page_translations"."id" AS t2_r0, "refinery_page_translations"."refinery_page_id" AS t2_r1, "refinery_page_translations"."locale" AS t2_r2, "refinery_page_translations"."created_at" AS t2_r3, "refinery_page_translations"."updated_at" AS t2_r4, "refinery_page_translations"."title" AS t2_r5, "refinery_page_translations"."custom_slug" AS t2_r6, "refinery_page_translations"."menu_title" AS t2_r7, "refinery_page_translations"."slug" AS t2_r8 FROM "refinery_pages" INNER JOIN "refinery_page_translations" ON "refinery_page_translations"."refinery_page_id" = "refinery_pages"."id" LEFT OUTER JOIN "refinery_pages" "parents_refinery_pages" ON "parents_refinery_pages"."id" = "refinery_pages"."parent_id" WHERE "refinery_pages"."draft" = 'f' AND "refinery_pages"."show_in_menu" = 't' AND "refinery_page_translations"."locale" = 'en'  ORDER BY "refinery_pages"."lft"[0m
+  [1m[35mRefinery::Page Load (0.2ms)[0m  SELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 4) AND ("refinery_pages"."rgt" >= 5)  ORDER BY "refinery_pages"."lft"
+  [1m[36mRefinery::Page::Translation Load (0.2ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 4)[0m
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_header.html.erb (45.4ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_footer.html.erb (0.5ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_javascripts.html.erb (43.5ms)
+Completed 200 OK in 474ms (Views: 412.7ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/about" for ::1 at 2015-05-04 12:30:26 -0700
+Processing by Refinery::PagesController#show as HTML
+  Parameters: {"path"=>"about", "locale"=>:en}
+  [1m[35mRefinery::Page Load (0.3ms)[0m  SELECT  "refinery_pages".* FROM "refinery_pages" INNER JOIN "refinery_page_translations" ON "refinery_page_translations"."refinery_page_id" = "refinery_pages"."id" WHERE "refinery_pages"."parent_id" IS NULL AND "refinery_page_translations"."locale" = 'en' AND "refinery_page_translations"."slug" = 'about'  ORDER BY "refinery_pages"."id" ASC LIMIT 1
+  [1m[36mRefinery::Page::Translation Load (0.1ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" = ?[0m  [["refinery_page_id", 3]]
+  [1m[35mRefinery::Page Load (0.2ms)[0m  SELECT  "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 7) AND ("refinery_pages"."rgt" >= 8) AND "refinery_pages"."parent_id" IS NULL  ORDER BY "refinery_pages"."lft" LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" = ?[0m  [["refinery_page_id", 3]]
+  [1m[35mRefinery::PagePart Load (0.1ms)[0m  SELECT "refinery_page_parts".* FROM "refinery_page_parts" WHERE "refinery_page_parts"."refinery_page_id" = ?  ORDER BY position ASC  [["refinery_page_id", 3]]
+  [1m[36mRefinery::PagePart::Translation Load (0.2ms)[0m  [1mSELECT "refinery_page_part_translations".* FROM "refinery_page_part_translations" WHERE "refinery_page_part_translations"."refinery_page_part_id" IN (4, 5)[0m
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_content_page.html.erb (3.5ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/pages/show.html.erb within layouts/application (16.5ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_html_tag.html.erb (0.0ms)
+  [1m[35mRefinery::User Load (0.1ms)[0m  SELECT  "refinery_users".* FROM "refinery_users" WHERE "refinery_users"."id" = ?  ORDER BY "refinery_users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRefinery::Role Load (0.1ms)[0m  [1mSELECT "refinery_roles".* FROM "refinery_roles" INNER JOIN "refinery_roles_users" ON "refinery_roles"."id" = "refinery_roles_users"."role_id" WHERE "refinery_roles_users"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_site_bar.html.erb (17.2ms)
+  [1m[35mSeoMetum Load (0.1ms)[0m  SELECT  "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = ? AND "seo_meta"."seo_meta_id" = ?  ORDER BY "seo_meta"."id" ASC LIMIT 1  [["seo_meta_type", "Refinery::Page::Translation"], ["seo_meta_id", 3]]
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_head.html.erb (24.1ms)
+Completed 500 Internal Server Error in 131ms
+
+ActionView::Template::Error (Invalid CSS after "": expected selector or at-rule, was "/*"):
+    3: <title><%= browser_title(yield(:title)) %></title>
+    4: <%= raw %(<meta name="description" content="#{@meta.meta_description}" />) if @meta.meta_description.present? -%>
+    5: <%= raw %(<link rel="canonical" href="#{request.protocol}#{request.host_with_port}#{@canonical}" />) if @canonical.present? -%>
+    6: <%= csrf_meta_tags if Refinery::Core.authenticity_token_on_frontend -%>
+    7: <%= yield :meta %>
+    8: 
+    9: <%= stylesheet_link_tag "application" %>
+  app/assets/stylesheets/application.scss:1
+
+
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.1ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (58.3ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (45.4ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (96.5ms)
+
+
+Started GET "/about" for ::1 at 2015-05-04 12:32:32 -0700
+Processing by Refinery::PagesController#show as HTML
+  Parameters: {"path"=>"about", "locale"=>:en}
+  [1m[36mRefinery::Page Load (0.3ms)[0m  [1mSELECT  "refinery_pages".* FROM "refinery_pages" INNER JOIN "refinery_page_translations" ON "refinery_page_translations"."refinery_page_id" = "refinery_pages"."id" WHERE "refinery_pages"."parent_id" IS NULL AND "refinery_page_translations"."locale" = 'en' AND "refinery_page_translations"."slug" = 'about'  ORDER BY "refinery_pages"."id" ASC LIMIT 1[0m
+  [1m[35mRefinery::Page::Translation Load (0.1ms)[0m  SELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" = ?  [["refinery_page_id", 3]]
+  [1m[36mRefinery::Page Load (0.2ms)[0m  [1mSELECT  "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 7) AND ("refinery_pages"."rgt" >= 8) AND "refinery_pages"."parent_id" IS NULL  ORDER BY "refinery_pages"."lft" LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" = ?  [["refinery_page_id", 3]]
+  [1m[36mRefinery::PagePart Load (0.1ms)[0m  [1mSELECT "refinery_page_parts".* FROM "refinery_page_parts" WHERE "refinery_page_parts"."refinery_page_id" = ?  ORDER BY position ASC[0m  [["refinery_page_id", 3]]
+  [1m[35mRefinery::PagePart::Translation Load (0.2ms)[0m  SELECT "refinery_page_part_translations".* FROM "refinery_page_part_translations" WHERE "refinery_page_part_translations"."refinery_page_part_id" IN (4, 5)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_content_page.html.erb (3.3ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/pages/app/views/refinery/pages/show.html.erb within layouts/application (12.7ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_html_tag.html.erb (0.1ms)
+  [1m[36mRefinery::User Load (0.1ms)[0m  [1mSELECT  "refinery_users".* FROM "refinery_users" WHERE "refinery_users"."id" = ?  ORDER BY "refinery_users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRefinery::Role Load (0.1ms)[0m  SELECT "refinery_roles".* FROM "refinery_roles" INNER JOIN "refinery_roles_users" ON "refinery_roles"."id" = "refinery_roles_users"."role_id" WHERE "refinery_roles_users"."user_id" = ?  [["user_id", 1]]
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_site_bar.html.erb (18.0ms)
+  [1m[36mSeoMetum Load (0.1ms)[0m  [1mSELECT  "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = ? AND "seo_meta"."seo_meta_id" = ?  ORDER BY "seo_meta"."id" ASC LIMIT 1[0m  [["seo_meta_type", "Refinery::Page::Translation"], ["seo_meta_id", 3]]
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_google_analytics.html.erb (0.1ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_head.html.erb (4039.8ms)
+  [1m[35mSQL (0.4ms)[0m  SELECT "refinery_pages"."id" AS t0_r0, "refinery_pages"."parent_id" AS t0_r1, "refinery_pages"."path" AS t0_r2, "refinery_pages"."slug" AS t0_r3, "refinery_pages"."custom_slug" AS t0_r4, "refinery_pages"."show_in_menu" AS t0_r5, "refinery_pages"."link_url" AS t0_r6, "refinery_pages"."menu_match" AS t0_r7, "refinery_pages"."deletable" AS t0_r8, "refinery_pages"."draft" AS t0_r9, "refinery_pages"."skip_to_first_child" AS t0_r10, "refinery_pages"."lft" AS t0_r11, "refinery_pages"."rgt" AS t0_r12, "refinery_pages"."depth" AS t0_r13, "refinery_pages"."view_template" AS t0_r14, "refinery_pages"."layout_template" AS t0_r15, "refinery_pages"."created_at" AS t0_r16, "refinery_pages"."updated_at" AS t0_r17, "parents_refinery_pages"."id" AS t1_r0, "parents_refinery_pages"."parent_id" AS t1_r1, "parents_refinery_pages"."path" AS t1_r2, "parents_refinery_pages"."slug" AS t1_r3, "parents_refinery_pages"."custom_slug" AS t1_r4, "parents_refinery_pages"."show_in_menu" AS t1_r5, "parents_refinery_pages"."link_url" AS t1_r6, "parents_refinery_pages"."menu_match" AS t1_r7, "parents_refinery_pages"."deletable" AS t1_r8, "parents_refinery_pages"."draft" AS t1_r9, "parents_refinery_pages"."skip_to_first_child" AS t1_r10, "parents_refinery_pages"."lft" AS t1_r11, "parents_refinery_pages"."rgt" AS t1_r12, "parents_refinery_pages"."depth" AS t1_r13, "parents_refinery_pages"."view_template" AS t1_r14, "parents_refinery_pages"."layout_template" AS t1_r15, "parents_refinery_pages"."created_at" AS t1_r16, "parents_refinery_pages"."updated_at" AS t1_r17, "refinery_page_translations"."id" AS t2_r0, "refinery_page_translations"."refinery_page_id" AS t2_r1, "refinery_page_translations"."locale" AS t2_r2, "refinery_page_translations"."created_at" AS t2_r3, "refinery_page_translations"."updated_at" AS t2_r4, "refinery_page_translations"."title" AS t2_r5, "refinery_page_translations"."custom_slug" AS t2_r6, "refinery_page_translations"."menu_title" AS t2_r7, "refinery_page_translations"."slug" AS t2_r8 FROM "refinery_pages" INNER JOIN "refinery_page_translations" ON "refinery_page_translations"."refinery_page_id" = "refinery_pages"."id" LEFT OUTER JOIN "refinery_pages" "parents_refinery_pages" ON "parents_refinery_pages"."id" = "refinery_pages"."parent_id" WHERE "refinery_pages"."draft" = 'f' AND "refinery_pages"."show_in_menu" = 't' AND "refinery_page_translations"."locale" = 'en'  ORDER BY "refinery_pages"."lft"
+  [1m[36mRefinery::Page Load (0.2ms)[0m  [1mSELECT "refinery_pages".* FROM "refinery_pages" WHERE ("refinery_pages"."lft" <= 4) AND ("refinery_pages"."rgt" >= 5)  ORDER BY "refinery_pages"."lft"[0m
+  [1m[35mRefinery::Page::Translation Load (0.2ms)[0m  SELECT "refinery_page_translations".* FROM "refinery_page_translations" WHERE "refinery_page_translations"."refinery_page_id" IN (1, 4)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_header.html.erb (18.4ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_footer.html.erb (0.3ms)
+  Rendered /Users/kaitlynhova/.rvm/gems/ruby-2.2.0/bundler/gems/refinerycms-09fdb826aeb5/core/app/views/refinery/_javascripts.html.erb (100.0ms)
+Completed 200 OK in 4292ms (Views: 4285.9ms | ActiveRecord: 1.9ms)
