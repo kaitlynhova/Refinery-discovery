@@ -53,6 +53,7 @@ gem 'refinerycms', git: 'https://github.com/refinery/refinerycms', branch: 'mast
 gem 'refinerycms-blog', git: 'https://github.com/refinery/refinerycms-blog', branch: 'master'
 
 # put Refinery page images below here
+gem 'refinerycms-page-images'
 
 gem 'quiet_assets', :group => :development
 
