@@ -45,8 +45,14 @@ group :development, :test do
   gem 'spring'
 end
 
+# Refinery stuff
 
 gem 'refinerycms', git: 'https://github.com/refinery/refinerycms', branch: 'master'
+
+# Refinery blog engine
+gem 'refinerycms-blog', git: 'https://github.com/refinery/refinerycms-blog', branch: 'master'
+
+# put Refinery page images below here
 
 gem 'quiet_assets', :group => :development
 
